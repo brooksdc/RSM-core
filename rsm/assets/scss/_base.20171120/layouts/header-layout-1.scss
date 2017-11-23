@@ -1,0 +1,148 @@
+/*
+structure:
+
+|dropin-1| |dropin-2|
+---------------------
+|logo|          |nav| 
+*/
+
+.header-layout-1 {
+
+	.site-header__top {
+		display: none;
+	}
+}
+
+@media (min-width: $desktop-header-on) {
+	
+	.header-layout-1 {
+		position: absolute;
+		z-index: 10;
+		top: 0;
+		left: 0;
+		right: 0;
+
+		// top
+		.site-header__top {
+			background: $off-white;
+			display: block;
+		}
+		.site-header__utility-col {
+			height: 40px
+		}
+
+		.header-dropin-2 {
+			text-align: right;
+
+			.site-header__dropin-widget {
+				padding-left: 20px;
+				position: relative;
+
+				&:before {
+					content: "|";
+					position: absolute;
+					padding: $header-utility-padding;
+					left: 8px;
+					top: -1px;
+					@include opacity(60,.6);
+				}
+			}
+			.site-header__dropin-widget:first-child:before {
+				content: none;
+			}
+		}
+		.rsm-social-links {
+			margin: 0;
+
+			li {
+				margin: 0 $gutter 0 0;
+			}
+			li a {
+				font-size: .9rem;
+				color: lighten($header-link-color, 10%);
+				height: auto;
+				line-height: 1;
+			}
+		}
+		
+		// main
+		.site-header__main {
+			padding-top: $gutter;
+			padding-bottom: $gutter;
+			background: $header-background-color;
+		}
+		.site-header__main > .container {
+			display: table;
+			width: 100%;
+		}
+
+		.site-header__branding,
+		.site-header__navigation {
+			display: table-cell;
+			vertical-align: middle;
+		}
+
+		.site-header__branding {
+			text-align: left;
+		}
+		.site-header__navigation {
+			text-align: right;
+		}
+		.site-header__navigation > .menu {
+			margin-left: -$gutter;
+			margin-right: -$gutter;
+		}
+		.site-header__navigation > .menu li > ul {
+			right: 0;
+			left: auto;
+		}
+
+	}
+
+}
+
+/* # Header Fixed / Sticky / Scrolling Settings
+  -- These rules depend on the header style being used.
+--------------------------------------------------------------*/
+
+@media (min-width: $sm) {
+	.header-layout-1 .site-header__main {	
+		
+		&.sticky {
+			position: fixed;
+			background: #fff;
+			z-index: 10;
+			top: 0;
+			left: 0;
+			right: 0;
+			box-shadow: 0 2px 5px rgba(0,0,0,.2);
+		}
+
+		// change styles of header at defined offset. (used with WAYPOINTS)
+		&.is-scrolling {
+			//background: lightgreen;
+
+			.site-header__retina-logo,
+			.site-header__standard-logo {
+				width: 180px;
+			}
+			.site-header__svg-logo > svg {
+				width: 180px;
+			}
+
+			//.site-header__navigation > .menu > li > a {
+				//line-height: 45px;
+			//}
+		}
+		// transition back to normal (scrolled back to top)
+		// This is class is temporary, but should "reset" the styles
+		// that have changed from the is-scrolling class above.
+		&.is-scrolling.transition-out {
+			//background: $header-background-color;
+
+			.site-header__logo {
+				width: auto;
+			}
+		}
+	}
+}

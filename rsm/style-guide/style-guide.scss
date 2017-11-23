@@ -1,0 +1,56 @@
+/*
+ Styles for style guide
+ */
+
+
+.swatch {
+	height: 150px;
+	display: block;
+	position: relative;
+	margin-bottom: 20px;
+
+	&:after {
+		display: block;
+		position: absolute;
+		bottom: -15px;
+		font-size: 10px;
+		color: #666;
+		font-style: italic;
+	}
+
+	&.brand-primary {
+		background: $brand-primary;
+
+		&:after {
+			content: "#{$brand-primary}";
+		}
+	}
+	&.brand-secondary {
+		background: $brand-secondary;
+
+		&:after {
+			content: "#{$brand-secondary}";
+		}
+	}
+	&.brand-accent {
+		background: $brand-accent;
+
+		&:after {
+			content: "#{$brand-accent}";
+		}
+	}
+	&.off-black {
+		background: $off-black;
+
+		&:after {
+			content: "#{$off-black}";
+		}
+	}
+	&.off-white {
+		background: $off-white;
+
+		&:after {
+			content: "#{$off-white}";
+		}
+	}
+}

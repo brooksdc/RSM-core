@@ -1,0 +1,222 @@
+.side-nav {
+  position: fixed;
+  width: 240px;
+  left: 0;
+  top: 0;
+  margin: 0;
+  transform: translateX(-100%);
+  height: 100%;
+  //height: calc(100% + 60px); //not sure what this is for
+  height: -moz-calc(100%); //Temporary Firefox Fix
+  padding-bottom: 60px;
+  background-color: $sidenav-bg-color;
+  z-index: 999;
+  backface-visibility: hidden;
+  overflow-y: auto;
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: translateX(-105%);
+
+  @extend .z-depth-1;
+
+  // Right Align
+  &.right-aligned {
+    right: 0;
+    transform: translateX(105%);
+    left: auto;
+    transform: translateX(100%);
+  }
+
+  .collapsible {
+    margin: 0;
+  }
+
+  a:hover,
+  a:focus {
+    text-decoration: none;
+  }
+
+  .side-nav-menu {
+    padding: 0;
+    margin: 0;
+  }
+  
+  .side-nav-menu li {
+    float: none;
+    line-height: $sidenav-item-height;
+
+    &.active { background-color: rgba(0,0,0,.05); }
+  }
+
+  .side-nav-menu li a {
+    color: $sidenav-font-color;
+    display: block;
+    font-size: 1rem;
+    height: $sidenav-item-height;
+    line-height: $sidenav-item-line-height;
+    padding: $sidenav-padding;
+    border-width: $sidenav-item-border-width;
+    border-style: $sidenav-item-border-style;
+    border-color: $sidenav-item-border-color;
+
+    &:hover {
+      background-color: rgba(0,0,0,.05);
+    }
+
+    &.btn, &.btn-large, &.btn-flat, &.btn-floating {
+      margin: 10px 15px;
+    }
+
+    &.btn,
+    &.btn-large,
+    &.btn-floating { color: $button-color; }
+    &.btn-flat { color: $button-flat-color; }
+
+    &.btn:hover,
+    &.btn-large:hover { background-color: lighten($button-background, 5%); }
+    &.btn-floating:hover { background-color: $button-background; }
+  }
+
+  &.side-nav--alternate {
+    background-color: $sidenav-alt-bg-color;
+
+    .side-nav-menu a {
+      color: $sidenav-alt-font-color;
+      border-color: $sidenav-alt-item-border-color;
+    }
+  }
+}
+
+
+// Touch interaction
+.drag-target {
+  height: 100%;
+  width: 10px;
+  position: fixed;
+  top: 0;
+  z-index: 998;
+}
+
+
+// Hidden side-nav for all sizes
+.side-nav.fixed {
+  a {
+    display: block;
+    padding: 0 $sidenav-padding-right;
+    color: $sidenav-font-color;
+  }
+}
+
+
+// Fixed side-nav shown
+.side-nav.fixed {
+  left: 0;
+  transform: translateX(0);
+  position: fixed;
+
+  // Right Align
+  &.right-aligned {
+    right: 0;
+    left: auto;
+  }
+}
+
+// Fixed sideNav hide on smaller
+@media #{$md-and-down} {
+  .side-nav.fixed {
+    transform: translateX(-105%);
+
+    &.right-aligned {
+      transform: translateX(105%);
+    }
+  }
+}
+
+
+.side-nav .collapsible-body li.active,
+.side-nav.fixed .collapsible-body li.active {
+  background-color: $brand-primary;
+  a {
+    color: $sidenav-bg-color;
+  }
+}
+
+#sidenav-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  height: 120vh;
+  background-color: $sidenav-overlay-bg-color;
+  z-index: 997;
+
+  will-change: opacity;
+}
+
+/* Other Side nav elements */
+.side-nav {
+  
+  .side-nav__block {
+    .anchor {
+      display: block;
+      padding: $sidenav-padding;
+      border-width: $sidenav-item-border-width;
+      border-style: $sidenav-item-border-style;
+      border-color: $sidenav-item-border-color;
+    } 
+  }
+
+  .side-nav__bottom {
+    padding: $sidenav-padding;
+  }
+
+  .side-nav__block__label {
+    display: block;
+    font-size: $sidenav-label-font-size;
+    font-weight: $sidenav-label-font-weight;
+    text-transform: $sidenav-label-text-transform;
+    line-height: $sidenav-label-lineheight;
+    color: $sidenav-label-color;
+    margin: $sidenav-label-margin;
+  }
+
+  .search-form {
+    width: 100%;
+    padding: $sidenav-padding;
+    @include clearfix();
+
+    input[type="search"],
+    .btn {
+      display: block;
+      float: left;
+    }
+    input[type="search"] {
+      width: 80% !important;
+      -webkit-border-top-right-radius: 0 !important;
+      -moz-border-top-right-radius: 0 !important;
+      border-top-right-radius: 0 !important;
+      -webkit-border-bottom-right-radius: 0 !important;
+      -moz-border-bottom-right-radius: 0 !important;
+      border-bottom-right-radius: 0 !important;
+    }
+    .btn {
+      width: 20% !important;
+      padding: 0;
+      -webkit-border-top-left-radius: 0 !important;
+      -moz-border-top-left-radius: 0 !important;
+      border-top-left-radius: 0 !important;
+      -webkit-border-bottom-left-radius: 0 !important;
+      -moz-border-bottom-left-radius: 0 !important;
+      border-bottom-left-radius: 0 !important;
+    }
+  }
+}
+
+
+/* adjust inherited list styles */
+.side-nav {
+  .list--inline li {
+    display: block;
+  }
+}

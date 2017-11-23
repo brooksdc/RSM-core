@@ -1,0 +1,534 @@
+/* ==========================================================================
+   CSS Variables
+   ========================================================================== */
+/**
+ * Table of Contents:
+ 
+ # Colors
+ # Fonts
+ # Typography
+ # Buttons
+ # Media Queries
+ # Grid
+ # Sections
+ # Date Picker
+ # Forms
+ # Navigation
+ # Side Navigation
+ # Spinners | Loaders
+ # Tables
+ # Footer
+ # Flow Text
+ # Progress Bar
+ # Transitions
+ # Social Icons
+ # Master Sprite Setup
+ # Modals
+ 
+ */
+
+
+/* # Colors
+   ========================================================================== */
+
+// brand colours
+$brand-primary: #000;
+$brand-secondary: #C8C06F;
+$brand-accent: #666; 
+
+// UI colours
+$brand-success: #5cb85c;
+$brand-info: #5bc0de;
+$brand-warning: #f0ad4e;
+$brand-danger: #ff0000;
+
+$success-color: $brand-success;
+$error-color: $brand-danger;
+
+$off-black: #111 !default;
+$off-white: #f7f7f7 !default;
+
+$text-color: $off-black;
+
+$body-background-color: #fff;
+
+//standard links
+$link-color: $brand-accent;
+$link-color-hover: lighten($brand-accent, 10%);
+
+
+
+/* # Fonts
+   ========================================================================== */
+
+//add custom font families here
+
+
+/* # Typography
+   ========================================================================== */
+
+// font stacks
+$primary-font-family: 'Muli', Helvetica, sans-serif; //headlines
+$secondary-font-family: 'Open Sans', Helvetica, sans-serif; //body content
+$icon-font-family: 'FontAwesome';
+
+@mixin font_1() {
+   font-family: $primary-font-family;
+}
+@mixin font_2() {
+   font-family: $secondary-font-family;
+}
+@mixin font_icon() {
+   font-family: $icon-font-family;
+}
+
+// Base font size. All REM values based off of this
+$html-fontsize-small: 12px;
+$html-fontsize-medium: 13px;
+$html-fontsize-large: 14px;
+$html-lineheight: 1.75;
+$html-fontfamily: $secondary-font-family;
+
+$lead-fontsize: 1.35rem;
+$small-fontsize: .825rem;
+$p-margin: 1.5rem;
+
+// Headline Sizes
+// REM formula --> (intended pixel size) / (base font size) = REM value;
+$h1-fontsize: 3rem !default;
+$h2-fontsize: 2.15rem !default;
+$h3-fontsize: 1.875rem !default;
+$h4-fontsize: 1.57rem !default;
+$h5-fontsize: 1.25rem !default;
+$h6-fontsize: 1rem !default;
+
+// Headline Margins
+$h1-margin: ($p-margin * 2) 0 $p-margin; //($h1-fontsize / 1.2) 0 ($h1-fontsize / 2.5) 0
+$h2-margin: ($p-margin * 2) 0 $p-margin;
+$h3-margin: ($p-margin * 2) 0 $p-margin;
+$h4-margin: ($p-margin * 2) 0 $p-margin;
+$h5-margin: ($p-margin * 2) 0 $p-margin;
+$h6-margin: ($p-margin * 2) 0 $p-margin;
+
+// Headline Line heights
+$h1-lineheight: 1.1;
+$h2-lineheight: 1.1;
+$h3-lineheight: 1.1;
+$h4-lineheight: 1.1;
+$h5-lineheight: 1.1;
+$h6-lineheight: 1.1;
+
+// Headline Font Families
+$h1-fontfamily: $primary-font-family;
+$h2-fontfamily: $primary-font-family;
+$h3-fontfamily: $primary-font-family;
+$h4-fontfamily: $primary-font-family;
+$h5-fontfamily: $primary-font-family;
+$h6-fontfamily: $primary-font-family;
+
+// Headline Font weights
+$h1-fontweight: 300;
+$h2-fontweight: 300;
+$h3-fontweight: 300;
+$h4-fontweight: 400;
+$h5-fontweight: 400;
+$h6-fontweight: 400;
+
+// blockquote basic setup
+$blockquote-font-size: 1.3rem !default;
+$blockquote-line-height: 1.5 !default;
+$blockquote-margin: 20px auto !default;
+$blockquote-padding: 0 0 0 1.5rem !default;
+
+/* # Buttons (form inputs may share these layout settings)
+   ========================================================================== */
+
+// Shared styles
+$button-border: 1px solid $text-color!default;
+$button-background-focus: lighten($brand-secondary, 4%) !default;
+$button-font-size: 1rem !default;
+$button-font-icon-size: 1rem !default;
+$button-height: 45px !default;
+$button-lineheight: 44px !default;
+$button-padding-top: 0 !default;
+$button-padding-right: 2rem !default;
+$button-padding-bottom: 0 !default;
+$button-padding-left: 2rem !default;
+$button-radius: 0px !default;
+$button-fontfamily: $secondary-font-family;
+$button-font-weight: 400 !default;
+$button-text-transform: none;
+
+// Disabled styles
+$button-disabled-background: #DFDFDF !default;
+$button-disabled-color: #9F9F9F !default;
+
+// Raised buttons
+$button-background: $text-color !default;
+$button-background-hover: lighten($button-background, 5%) !default;
+$button-color: #fff !default;
+
+$button-primary-background: $brand-primary !default;
+$button-primary-background-hover: lighten($button-primary-background, 5%) !default;
+$button-primary-color: #fff !default;
+
+$button-secondary-background: $brand-secondary !default;
+$button-secondary-background-hover: lighten($button-secondary-background, 5%) !default;
+$button-secondary-color: #fff !default;
+
+$button-accent-background: $brand-accent !default;
+$button-accent-background-hover: lighten($button-accent-background, 5%) !default;
+$button-accent-color: #fff !default;
+
+$button-neutral-background: #ddd !default;
+$button-neutral-background-hover: lighten($button-neutral-background, 5%) !default;
+$button-neutral-color: $text-color !default;
+
+// Large buttons
+$button-large-font-size: 1.25rem !default;
+$button-large-icon-font-size: 1.4rem !default;
+$button-large-height: 56px !default;
+$button-large-line-height: 54px;
+$button-large-radius: 0px !default;
+$button-large-padding-top: 0 !default;
+$button-large-padding-right: 2.5rem !default;
+$button-large-padding-bottom: 0 !default;
+$button-large-padding-left: 2.5rem !default;
+
+// Small buttons
+$button-small-font-size: .75rem !default;
+$button-small-icon-font-size: 1rem !default;
+$button-small-height: $button-height * 0.65 !default;
+$button-small-line-height: $button-small-height;
+$button-small-radius: 0px !default;
+$button-small-padding-top: 0 !default;
+$button-small-padding-right: 1rem !default;
+$button-small-padding-bottom: 0 !default;
+$button-small-padding-left: 1rem !default;
+
+// Flat buttons
+$button-flat-color: #343434 !default;
+$button-flat-disabled-color: lighten(#999, 10%) !default;
+
+// Floating buttons
+$button-floating-background: $brand-secondary !default;
+$button-floating-background-hover: $button-floating-background !default;
+$button-floating-color: #fff !default;
+$button-floating-size: 37px !default;
+$button-floating-large-size: $button-floating-size * 1.5 !default;
+$button-floating-radius: 50% !default;
+
+
+
+/* # Media Queries
+   ========================================================================== */
+
+//general variables for global use
+$xs: 767px !default; //max
+$sm: 768px !default; //min
+$md: 992px !default; //min
+$lg: 1200px !default; //min
+$xl: 1400px !default; //min
+
+//Pre-made queries. Usage: @media #{$breakpoint} {...}
+$xs-only: "only screen and (max-width : #{$xs})" !default;
+
+$sm-only: "only screen and (min-width : #{$sm}) and (max-width : #{$md - 1px})" !default;
+$sm-and-up: "only screen and (min-width : #{$sm})" !default;
+$sm-and-down: "only screen and (max-width : #{$md - 1px})" !default;
+
+$md-only: "only screen and (min-width : #{$md}) and (max-width : #{$lg - 1px})" !default;
+$md-and-up: "only screen and (min-width : #{$md})" !default;
+$md-and-down: "only screen and (max-width : #{$lg - 1px})" !default;
+
+$lg-only: "only screen and (min-width : #{$lg}) and (max-width : #{$xl - 1px})" !default;
+$lg-and-up: "only screen and (min-width : #{$lg})" !default;
+$lg-and-down: "only screen and (max-width : #{$xl - 1px})" !default;
+
+$xl-only: "only screen and (min-width : #{$xl})" !default;
+
+
+
+/* # Grid (Uses Bootstrap 3. Upgrade to new BootStrap 4 sass build when ready)
+   ========================================================================== */
+
+$container-max: 1200px;
+$container-max-narrow: 800px;
+
+$gutter-width: 15px !default; //1.5rem !default;
+$element-top-margin: $gutter-width/3 !default;
+$element-bottom-margin: ($gutter-width*2)/3 !default;
+
+$gutter: $gutter-width;
+
+
+/* # Section defaults
+   ========================================================================== */
+$section-padding: ($gutter-width * 4) 0;
+$section-header-padding: 0 0 $gutter;
+$section-footer-padding: $gutter 0 0;
+
+/* # Desktop Header
+   ========================================================================== */
+
+$header-background-color: transparent;
+$header-text-color: #fff;
+$header-link-color: #fff;
+$header-link-color-hover: $brand-secondary;
+$header-link-color-active: $brand-secondary;
+$header-link-background-hover: transparent;
+$header-link-font-size: 1.1875rem;
+$header-link-line-height: 1;
+$header-link-padding: 20px;
+$header-link-text-decoration: none;
+
+//dropdown menus
+$header-sub-link-color: #fff;
+$header-sub-link-color-hover: $brand-secondary;
+$header-sub-link-font-size: 1.1875rem;
+$header-sub-link-line-height: 1;
+$header-sub-link-padding: 20px;
+$header-sub-link-background: rgba(0,0,0,.5); 
+$header-sub-link-background-hover: rgba(0,0,0,.5);
+$header-sub-box-shadow: none; //0 2px 1px rgba(0,0,0,.1);
+$header-sub-radius: $button-radius;
+
+//utility widgets
+$header-utility-font-size: .8rem;
+$header-utility-line-height: 1;
+$header-utility-padding: 5px 0; 
+
+/* # Mobile Header
+   ========================================================================== */
+
+$mobile-header-background-color: #fff;
+
+//mobile toggle menu buttons
+$mobile-toggle-btn-bg-color: transparent;
+$mobile-toggle-btn-text-color: #000;
+$mobile-toggle-btn-width: 45px;
+$mobile-toggle-btn-height: 100%;
+$mobile-toggle-btn-padding: 0 10px;
+
+// breakpoint setup
+$mobile-header-on: $md - 1px; //max-width
+$desktop-header-on: $md; //min-width
+
+
+/* # Side Navigation
+   ========================================================================== */
+
+$sidenav-font-color: #000 !default;
+$sidenav-bg-color: #fff !default;
+$sidenav-padding-right: 30px !default; //original
+$sidenav-item-height: auto;
+$sidenav-item-line-height: 1.2;
+$sidenav-padding: 22px 30px !default;
+$sidenav-item-border-width: 0 0 1px 0;
+$sidenav-item-border-style: solid;
+$sidenav-item-border-color: #eee;
+
+//.side-nav--alternate
+$sidenav-alt-font-color: $sidenav-font-color;
+$sidenav-alt-bg-color: $sidenav-bg-color;
+$sidenav-alt-item-border-color: $sidenav-item-border-color;
+
+// labels
+$sidenav-label-font-size: .825rem !default;
+$sidenav-label-font-weight: 700 !default;
+$sidenav-label-text-transform: uppercase !default;
+$sidenav-label-lineheight: 1 !default;
+$sidenav-label-color: $text-color !default;
+$sidenav-label-margin: 0 0 5px !default;
+
+// overlay
+$sidenav-overlay-bg-color: rgba(0,0,0,.5);
+
+
+/* # Date Picker
+   ========================================================================== */
+
+$datepicker-weekday-bg: darken($brand-secondary, 7%) !default;
+$datepicker-date-bg: $brand-secondary !default;
+$datepicker-year: rgba(255, 255, 255, .4) !default;
+$datepicker-focus: rgba(0,0,0, .05) !default;
+$datepicker-selected: $brand-secondary !default;
+$datepicker-selected-outfocus: desaturate(lighten($brand-secondary, 35%), 15%) !default;
+
+
+/* # Forms
+   ========================================================================== */
+
+// Text Inputs + Textarea
+$form-input-height: $button-height !default;
+$form-input-border: 1px solid #fff !default;
+$form-input-border-radius: $button-radius !default;
+$form-input-background: transparent !default;
+$form-input-font-size: 1rem !default;
+$form-input-line-height: $button-lineheight !default;
+$form-input-text-color: #fff !default;
+$form-input-margin: 0 !default;
+$form-input-padding: 0 $gutter !default;
+$form-input-transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s !default;
+$placeholder-text-color: #666;
+$form-input-box-shadow: none;
+
+// focus
+$form-input-focus-color: $brand-secondary !default;
+$form-input-focus-border-color: $brand-secondary;
+$form-input-focus-background-color: $off-black; 
+$form-input-focus-box-shadow: none; //0 0 8px rgba(102, 175, 233, 0.6);
+
+
+// alternate states
+$form-input-error-color: $error-color !default;
+$form-input-success-color: $success-color !default;
+
+// disabled
+$form-input-disabled-color: rgba(0,0,0, .26) !default;
+$form-input-disabled-solid-color: #BDBDBD !default;
+$form-input-disabled-border: 1px dotted $form-input-disabled-color !default;
+$form-input-invalid-border: 1px solid $form-input-error-color !default;
+
+// input label
+$label-font-size: 1rem !default;
+$label-line-height: 1 !default;
+$label-font-weight: 400 !default;;
+$label-margin: 0 0 5px;
+$label-display: inline-block;
+
+// form-group blocks
+$form-group-margin: 0 0 $gutter;
+
+/* // Radio Buttons
+$radio-fill-color: $brand-secondary !default;
+$radio-empty-color: #5a5a5a !default;
+$radio-border: 2px solid $radio-fill-color !default;
+
+// Range
+$range-height: 14px !default;
+$range-width: 14px !default;
+$track-height: 3px !default;
+
+// Select
+$select-border: 1px solid #f2f2f2 !default;
+$select-background: rgba(255, 255, 255, 0.90) !default;
+$select-focus: 1px solid lighten($brand-secondary, 47%) !default;
+$select-padding: 5px !default;
+$select-radius: 2px !default;
+$select-disabled-color: rgba(0,0,0,.3) !default;
+
+// Switches
+$switch-bg-color: $brand-secondary !default;
+$switch-checked-lever-bg: desaturate(lighten($brand-secondary, 25%), 25%) !default;
+$switch-unchecked-bg: #F1F1F1 !default;
+$switch-unchecked-lever-bg: #818181 !default;
+$switch-radius: 15px !default; */
+
+/* # Spinners | Loaders
+   ========================================================================== */
+
+$spinner-default-color: $brand-secondary !default;
+
+
+/* # Tables
+   ========================================================================== */
+
+$table-border-color: #d0d0d0 !default;
+$table-striped-color: #f2f2f2 !default;
+
+
+/* # Footer
+   ========================================================================== */
+// the footer background color is actually applied to the HTML element
+$footer-bg-color: #222121 !default;
+
+$footer-padding: 45px 0;
+$footer-font-size: 1rem;
+$footer-text-color: #fff;
+$footer-text-transform: none;
+$footer-text-align: left;
+
+$footer-link-color: #fff;
+$footer-link-color-hover: $brand-secondary;
+$footer-link-font-size: $footer-font-size;
+
+// footer menus
+$footer-menu-title-font-size: 1.5rem;
+$footer-menu-title-color: #fff;
+$footer-menu-title-margin: 0 0 1rem;
+$footer-menu-title-text-transform: none;
+
+$footer-menu-margin: 1rem 0;
+$footer-menu-padding: 0;
+$footer-menu-list-style: none;
+
+$footer-menu-link-font-size: $footer-font-size;
+$footer-menu-link-padding: 5px 0;
+$footer-menu-link-color: $link-color;
+$footer-menu-link-color-hover: lighten($link-color, 10%);
+$footer-menu-link-text-decoration: none;
+$footer-menu-link-text-transform: none;
+
+$footer-menu-link-before-content: none; //'\f105';
+$footer-menu-link-before-font: $icon-font-family;
+$footer-menu-link-before-top: 5px;
+$footer-menu-link-before-left: 0;
+
+// mobile defaults
+$mobile-footer-text-align: center;
+$mobile-footer-menu-title-margin: 2rem 0 1rem;
+
+/* # Flow Text
+   ========================================================================== */
+
+$range : $lg - $xs !default;
+$intervals: 20 !default;
+$interval-size: $range / $intervals !default;
+
+
+/* # Progress Bar
+   ========================================================================== */
+
+$progress-bar-color: $brand-secondary !default;
+
+
+/* # Transitions
+   ========================================================================== */
+
+$ease: .2s ease-in-out;
+$cubic: 0.2s cubic-bezier(0.15, 0.0482, 0.335, 1) 0s;
+
+
+/* # Social Icons
+   ========================================================================== */
+$social-icon-width: 25px;
+$social-icon-height: 25px;
+$social-icon-lineheight: 25px;
+$social-icon-radius: 50%;
+$social-icon-fontsize: 18px;
+$social-icon-spacing: 3px;
+
+
+/* # Page Navi (requires plugin)
+   ========================================================================== */
+$pagenavi-width: $mobile-toggle-btn-width;
+$pagenavi-height: $mobile-toggle-btn-width;
+$pagenavi-lineheight: $mobile-toggle-btn-width;
+
+
+/* # Master Sprite Setup
+   ========================================================================== */
+// file path variables
+//$master_sprite: 'images/master-sprite.png';
+//$lores_dimensions: 462px 472px; // these need to match the non-retina image dimensions
+//$master_sprite_x2: 'images/master-sprite-x2.png';
+
+
+/* # Modals
+   ========================================================================== */
+
+$modal-backdrop-color: rgba(25,25,25,.9);
+
+
+

@@ -1,0 +1,92 @@
+
+a {
+  text-decoration: none;
+}
+
+//font sizing on the HTML element so we can use REM units.
+html {
+  line-height: $html-lineheight;
+
+  @media only screen and (min-width: 0) {
+    font-size: $html-fontsize-small;
+  }
+
+  @media only screen and (min-width: $md) {
+    font-size: $html-fontsize-medium;
+  }
+
+  @media only screen and (min-width: $lg) {
+    font-size: $html-fontsize-large;
+  }
+ 
+}
+
+body {
+  font-size: inherit;
+  line-height: inherit;
+  font-family: $html-fontfamily;
+  font-weight: normal;
+  color: $off-black;
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  font-weight: 400;
+  line-height: 1.1;
+
+  a {
+    font-weight: inherit;
+  }
+}
+
+// Header Styles
+h1, .h1 { font-size: ($h1-fontsize * .75); line-height: $h1-lineheight; margin: $h1-margin; font-family: $h1-fontfamily; font-weight: $h1-fontweight; }
+h2, .h2 { font-size: ($h2-fontsize * .75); line-height: $h2-lineheight; margin: $h2-margin; font-family: $h2-fontfamily; font-weight: $h2-fontweight; }
+h3, .h3 { font-size: ($h3-fontsize * .75); line-height: $h3-lineheight; margin: $h3-margin; font-family: $h3-fontfamily; font-weight: $h3-fontweight; }
+h4, .h4 { font-size: ($h4-fontsize * 1); line-height: $h4-lineheight; margin: $h4-margin; font-family: $h4-fontfamily; font-weight: $h4-fontweight; }
+h5, .h5 { font-size: ($h5-fontsize * 1); line-height: $h5-lineheight; margin: $h5-margin; font-family: $h5-fontfamily; font-weight: $h5-fontweight; }
+h6, .h6 { font-size: ($h6-fontsize * 1); line-height: $h6-lineheight; margin: $h6-margin; font-family: $h6-fontfamily; font-weight: $h6-fontweight; }
+
+// larger screen sizes
+@media #{$md-and-up} {
+  h1, .h1 { font-size: $h1-fontsize; }
+  h2, .h2 { font-size: $h2-fontsize; }
+  h3, .h3 { font-size: $h3-fontsize; }
+  h4, .h4 { font-size: $h4-fontsize; }
+  h5, .h5 { font-size: $h5-fontsize; }
+  h6, .h6 { font-size: $h6-fontsize; }
+}
+
+// Text Styles
+p { margin: $p-margin 0; }
+em { font-style: italic; }
+strong { font-weight: 700; }
+small { font-size: $small-fontsize; }
+.light { font-weight: 300; }
+.thin { font-weight: 200; }
+.lead { font-size: $lead-fontsize; }
+
+
+.flow-text{
+  font-weight: 300;
+  $i: 0;
+  @while $i <= $intervals {
+    @media only screen and (min-width : 360 + ($i * $interval-size)) {
+      font-size: 1.2rem * (1 + (.02 * $i));
+    }
+    $i: $i + 1;
+  }
+
+  // Handle below 360px screen
+  @media only screen and (max-width: 360px) {
+    font-size: 1.2rem;
+  }
+}
+
+//  Blockquote
+blockquote {
+  margin: $blockquote-margin;
+  padding: $blockquote-padding;
+  border-left: 5px solid $brand-primary;
+  font-size: $blockquote-font-size;
+  line-height: $blockquote-line-height;
+}

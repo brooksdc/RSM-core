@@ -1,0 +1,107 @@
+/* # Form Elements (overrides boostrap .form-control )
+--------------------------------------------------------------*/
+
+//placeholder color
+::-webkit-input-placeholder {
+	color: $placeholder-text-color;
+}
+:-moz-placeholder { /* Firefox 18- */
+	color: $placeholder-text-color;  
+}
+::-moz-placeholder {  /* Firefox 19+ */
+	color: $placeholder-text-color;  
+}
+:-ms-input-placeholder {  
+	color: $placeholder-text-color;  
+}
+.form-control::-webkit-input-placeholder {
+	color: $placeholder-text-color;
+}
+.form-control:-moz-placeholder { /* Firefox 18- */
+	color: $placeholder-text-color;  
+}
+.form-control::-moz-placeholder {  /* Firefox 19+ */
+	color: $placeholder-text-color;  
+}
+.form-control:-ms-input-placeholder {  
+	color: $placeholder-text-color;  
+}  
+
+/*
+ Setting this up to work naturally on text-like inputs or by adding the bootstrap .form-control class
+ */
+input:not([type="submit"]):not([type="file"]):not([type="radio"]):not([type="checkbox"]), textarea,
+.form-control {
+	background-color: $form-input-background;
+	background-image: none;
+	border: $form-input-border;
+	@include border-radius($form-input-border-radius);
+	box-shadow: $form-input-box-shadow;
+	color: $form-input-text-color;
+	display: block;
+	font-size: $form-input-font-size;
+	height: $form-input-height;
+	line-height: $form-input-line-height;
+	padding: $form-input-padding;
+	-webkit-transition: $form-input-transition;
+	-moz-transition: $form-input-transition;
+	-ms-transition: $form-input-transition;
+	-o-transition: $form-input-transition;
+	transition: $form-input-transition;
+	width: 100%;
+	margin: $form-input-margin;
+
+	&:focus {
+		border-color: $form-input-focus-border-color;
+		box-shadow: $form-input-focus-box-shadow;
+		outline: none;
+		background-color: $form-input-focus-background-color;
+	}
+
+	.form-inline & {
+		display: inline-block;
+		width: auto;
+		vertical-align: middle;
+	}
+}
+textarea {
+	height: auto;
+	line-height: 1.25;
+	padding-bottom: $gutter;
+  	padding-top: $gutter;
+}
+
+label {
+	display: $label-display;
+	font-weight: $label-font-weight;
+	margin: $label-margin;
+	max-width: 100%;
+	font-size: $label-font-size;
+	line-height: $label-line-height;
+
+	&.required:after {
+		content: "*";
+		margin-left: 3px;
+	}
+}
+.radio,
+.checkbox {
+	label {
+	  cursor: pointer;
+	  margin-bottom: 0;
+	  min-height: 20px;
+	  padding-left: 20px;
+	  font-size: $form-input-font-size;
+	  line-height: 20px;
+	}
+}
+
+.form-group {
+	margin: $form-group-margin;
+
+	.form-inline & {
+		display: inline-block;
+		width: auto;
+		vertical-align: middle;
+	}
+}

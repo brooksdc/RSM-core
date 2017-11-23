@@ -1,0 +1,159 @@
+/* # Hero Banner B - Parallax
+--------------------------------------------------------------*/
+$hero_banner_height_small: 350px;
+$hero_banner_height_medium: 550px;
+$hero_banner_height_large: 750px;
+
+
+.rsm-hero-banner-b {
+	background-color: $off-black;
+	position: relative;
+	overflow: hidden;
+
+	.rsm-hero-banner-b__inner {
+		height: $hero_banner_height_small;
+	}
+
+	// message
+	.rsm-hero__message-holder {
+		position: absolute;
+		top: 55%;
+		left: 60px;
+		right: 60px;
+		@include transform(translate(0,-50%));
+		z-index: 3;
+		text-align: center;
+	}
+	.rsm-hero__message {
+		color: #fff;
+	}
+	.rsm-hero__title-prefix {
+		font-size: .825rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: .5px;
+		margin: 0 0 5px;
+		line-height: 1;
+	}
+	.rsm-hero__title {
+		margin: 0;
+		font-weight: 900;
+		font-size: 3.3rem;
+		text-shadow: 0 2px 5px rgba(0,0,0,.2);
+	}
+	.rsm-hero__subtitle {
+		margin: 10px 0 0;
+		font-size: 2rem;
+		line-height: 1;
+		font-style: italic;
+		font-weight: 400;
+		text-shadow: 0 2px 5px rgba(0,0,0,.2);
+	}
+	.rsm-hero__button-holder {
+		margin: 2rem 0 0;
+	}
+	
+	.rsm-hero__image-holder {
+		position: relative;
+		height: 100%;
+		@include transition(opacity $ease);
+		@include opacity(100,1);
+
+		&.no-fouc {
+			@include opacity(0,0);
+		}
+
+		.rsm-hero__image {
+			height: 110%; //making it larger than the container to avoid weird gaps.
+			width: 100%;
+			background-position: center;
+			background-repeat: no-repeat;
+			-webkit-background-size: cover;
+			background-size: cover;
+			position: relative;
+
+			&:after {
+				content: "";
+				display: block;
+				position: absolute;
+				top: 0;
+				right: 0;
+				left: 0;
+				bottom: 0;
+				background: #000;
+				@include opacity(50,.5);
+				z-index: 2;
+			}
+		}
+	}
+	
+	
+	@media (max-width: $xs) {
+		&:before {
+			content: "";
+			display: block;
+			position: absolute;
+			top: 0;
+			right: 0;
+			left: 0;
+			height: 130px;
+			background: -moz-linear-gradient(top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+			background: -webkit-linear-gradient(top, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0) 100%);
+			background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0) 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc000000', endColorstr='#00000000',GradientType=0 );
+			z-index: 2;
+		}
+		
+		.rsm-hero__message-holder {
+			left: $gutter;
+			right: $gutter;
+		}
+		.rsm-hero__title-prefix {
+			font-size: .7rem;
+		}
+		.rsm-hero__title {
+			font-size: 1.75rem;
+		}
+		.rsm-hero__subtitle {
+			font-size: 1rem;
+		}
+
+	}
+
+	@media (min-width: $sm) {
+		
+		.rsm-hero-banner-b__inner {
+			height: $hero_banner_height_medium;
+		}
+
+	}
+	@media (min-width: $lg) and (min-height: 950px) {
+		
+		.rsm-hero-banner-b__inner {
+			height: $hero_banner_height_large;
+		}
+
+	}
+}
+
+// OPTION:
+// Set FULLHEIGHT on parent elements so banner can be fullheight.
+// Is most accusrate if the site-header is fixed or absolute;
+@media (min-width: $sm) and (min-height: 600px) {
+	
+	html, body.has-full-height-hero {
+		height: 100%;
+
+		#page,
+		.rsm-hero-banner-b,
+		.rsm-hero-banner-b__inner,
+		.rsm-hero-banner-b .rsm-hero__image-holder {
+			height: 100%;
+		}
+
+		#main {
+			//setting background-color this because the standard #page element collapses to only 100% in this mode.
+			background-color: $body-background-color;
+		}
+	}
+}

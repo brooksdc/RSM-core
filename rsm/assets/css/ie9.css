@@ -1,0 +1,26 @@
+/*
+ Use this file to simplify any layouts in IE9 and lower.
+
+ There ARE browser warnings in the header of this theme to upgrade their browser if this is the case,
+ but the website content should still be accessible and legible at the very least.
+
+ Common issues to watch out for in IE9 and lower:
+ -- transform: translate(()) rules won't work
+ -- transitions don't work
+ -- flexbox doesn't work
+ */
+
+.flex-container {
+	display: block !important;
+}
+.flex-col {
+	display: block;
+	float: left;
+	min-height: 1px;
+}
+
+
+.rsm-masthead-cta-box {
+	left: 0;
+	right: 0;
+}

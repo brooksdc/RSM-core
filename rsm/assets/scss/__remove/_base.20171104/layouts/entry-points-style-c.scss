@@ -1,0 +1,102 @@
+/* 
+ Entry Points -- Style C
+ */
+.entry-points-style-c {
+	
+	.entry-point-holder {
+		width: 100%;
+		margin: 0 0 ($gutter * 2);
+	}
+
+	.entry-point .anchor {
+		display: block;
+		text-align: left;
+		color: $text-color;
+
+		.entry-point__top,
+		.entry-point__bottom {
+			display: block;
+		}
+		.entry-point__top {
+			height: 265px;
+			width: 100%;
+			position: relative;
+		}
+		.entry-point__image {
+			background-repeat: no-repeat;
+			background-position: center;
+			-webkit-background-size: cover;
+			background-size: cover;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			z-index: 0;
+		}
+		.entry-point__title {
+			display: block;
+			color: $text-color;
+			position: absolute;
+			z-index: 2;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			margin: 0;
+			padding: $gutter;
+			line-height: 1;
+			min-height: 105px;
+			font-size: 1.5rem;
+
+			&:before {
+				content: "";
+				background: #fff;
+				@include opacity(60,.6);
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				z-index: -1;
+				@include transition(all $ease);
+			}
+		}
+		.entry-point__bottom {
+			padding: $gutter;
+		}
+		.entry-point__subtext {
+			line-height: 1.2;
+			font-size: 1rem;
+			display: block;
+		}
+
+		&:hover {
+			text-decoration: none;
+
+			.entry-point__title:before {
+				@include opacity(90,.9);
+			}
+		}
+	}
+
+	@media (min-width: $sm) and (max-width: $md - 1px) {
+		.entry-point-holder {
+			width: 50%;
+
+			&:nth-child(2n+1){
+				clear: left;
+			}
+		}
+	}
+
+	@media (min-width: $md) {
+		.entry-point-holder {
+			width: 25%;
+
+			&:nth-child(4n+1){
+				clear: left;
+			}
+		}
+	}
+}

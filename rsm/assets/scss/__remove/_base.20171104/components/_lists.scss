@@ -1,0 +1,84 @@
+// Lists
+ul, ol {
+  margin: $p-margin 0;
+  padding-left: 18px;
+}
+
+// inline list
+.list--inline {
+  margin-right: -($gutter/2);
+  margin-left: -($gutter/2);
+  padding: 0;
+  font-size: 0;
+
+  li {
+    list-style: none;
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: ($gutter/2);
+    padding-right: ($gutter/2);
+    font-size: 1rem;
+  }
+}
+
+// bullet list
+.list--bullet {
+  list-style: disc;
+  padding-left: 18px;
+  
+  li {
+    list-style-type: unset;
+  }
+}
+
+.list--no-bullets {
+  list-style: none;
+  padding: 0;
+  
+  li {
+    list-style-type: none;
+  }
+}
+
+// list with bar separator
+.list--bar-after {
+  font-size: 0;
+
+  li {
+    font-size: 1rem;
+    position: relative;
+
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      background: $text-color;
+      width: 1px;
+      height: 1em;
+      right: 0;
+      top: 50%;
+      margin-top: -.5em;
+    }
+    &:last-child:after {
+      content: none;
+    }
+  }
+}
+
+// striped list
+.list--striped {
+  list-style: none;
+  padding: 0;
+
+  li {
+    display: block;
+    width: 100%;
+    padding: ($gutter/2);
+  }
+  li:nth-child(odd) {
+    background: $off-white;
+  }
+  li:nth-child(even) {
+    background: transparent;
+  }
+}

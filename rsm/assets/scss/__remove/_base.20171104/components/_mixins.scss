@@ -1,0 +1,330 @@
+// @mixin box-shadow-2($args1, $args2) {
+//     -webkit-box-shadow: $args1, $args2;
+//     -moz-box-shadow: $args1, $args2;
+//     box-shadow: $args1, $args2;
+// }
+
+@mixin font_primary() {
+  font-family: $primary-font-family;
+}
+@mixin font_secondary() {
+  font-family: $secondary-font-family;
+}
+@mixin font_icon() {
+  font-family: $icon-font-family;
+}
+
+// Parent level clear. Must be used on :before and :after rules of element.
+@mixin clear() {
+  clear: both;
+  display: table;
+  content: "";
+}
+
+//parent level clear within nested element
+@mixin clearfix() {
+  &:before,
+  &:after {
+    clear: both;
+    display: table;
+    content: ""; 
+  }
+}
+
+//screenreader only
+@mixin sr-only() {
+  border: 0 none;
+  clip: rect(0px, 0px, 0px, 0px);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+// Rest list styles
+@mixin reset_list() {
+  list-style: none;
+  padding: 0;
+}
+
+// IE8 and lower display:inline-block;
+@mixin inline-block() {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+}
+
+//background-size
+@mixin background-size($rule) {
+  -webkit-background-size: $rule;
+  -moz-background-size: $rule;
+  -o-background-size: $rule;
+  background-size: $rule;
+}
+
+// text-overflow
+@mixin text-overflow($v) {
+  -ms-text-overflow: $v;
+  -o-text-overflow: $v;
+  text-overflow: $v;
+}
+
+// word-break
+@mixin word-break($v) {
+  -ms-word-break: $v;
+  word-break: $v;
+}
+
+// alignment
+@mixin alignment($display, $alignment) {
+  display: $display;
+  vertical-align: $alignment;
+}
+
+// Sizing shortcuts
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+// font size
+@mixin font_size ($font-size, $line-height){
+  font-size: $font-size;
+  line-height: $line-height;
+}
+
+//absolute centre
+@mixin absolute_center() {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  @include transform(translate(-50%,-50%));
+}
+
+//overlay colour (should be used as a :before pseudo element)
+@mixin overlay_color($color, $ie_opacity, $opacity) {
+  content: "";
+  display: block;
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: $color;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$ie_opacity})";
+  filter: alpha(opacity=$ie_opacity);
+  opacity: $opacity;
+}
+
+//Arrow Down
+@mixin arrow_down($size, $color){
+  border-left: $size solid transparent;
+  border-right: $size solid transparent;
+  border-top: $size solid $color;
+}
+//Arrow Right
+@mixin arrow_right($size, $color){
+  border-left: $size solid $color;
+  border-bottom: $size solid transparent;
+  border-top: $size solid transparent;
+}
+//Arrow Left
+@mixin arrow_left($size, $color){
+  border-right: $size solid $color;
+  border-bottom: $size solid transparent;
+  border-top: $size solid transparent;
+}
+//Arrow Up
+@mixin arrow_up($size, $color){
+  border-bottom: $size solid $color;
+  border-left: $size solid transparent;
+  border-right: $size solid transparent;
+}
+
+/* 
+ * Flexbox properties
+ */
+@mixin column-count($i) {
+  -webkit-column-count: $i;
+  -moz-column-count: $i;
+  -ms-column-count: $i;
+  -o-column-count: $i;
+  column-count: $i;
+} 
+@mixin column-gap($i) {
+  -webkit-column-gap: $i;
+  -moz-column-gap: $i;
+  -ms-column-gap: $i;
+  -o-column-gap: $i;
+  column-gap: $i;
+}
+@mixin flex-flow($direction, $wrap) {
+  //combines flex-direction: and flex-wrap: properties
+  -webkit-flex-flow: $direction $wrap;
+  -moz-flex-flow: $direction $wrap;
+  -ms-flex-flow: $direction $wrap;
+  -o-flex-flow: $direction $wrap;
+  flex-flow: $direction $wrap;
+}  
+
+/*
+ * Media Queries
+ */
+// min-width
+ @mixin mq-min($canvas) {
+    @media (min-width: $canvas) {
+      @content;
+    }
+}
+// max-width
+ @mixin mq-max($canvas) {
+    @media (max-width: $canvas) {
+      @content;
+    }
+} 
+// min-width and max-width
+ @mixin mq-min-max($min, $max) {
+    @media (min-width: $min) and (max-width: $max) {
+      @content;
+    }
+} 
+// min-height
+ @mixin mq-min-height($canvas) {
+    @media (min-height: $canvas) {
+      @content;
+    }
+}
+// max-height
+ @mixin mq-max-height($canvas) {
+    @media (max-height: $canvas) {
+      @content;
+    }
+}  
+
+// Linear Gradient
+@mixin linear-gradient($start, $stop) {
+  background: $start; /* Old browsers */
+  background: -moz-linear-gradient(top, $start 0%, $stop 99%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$start), color-stop(99%,$stop)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, $start 0%,$stop 99%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, $start 0%,$stop 99%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, $start 0%,$stop 99%); /* IE10+ */
+  background: linear-gradient(to bottom, $start 0%,$stop 99%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$start', endColorstr='$stop',GradientType=0 ); /* IE6-9 */
+}
+
+@mixin linear-gradient-horiz($start, $stop) {
+  background: $start; /* Old browsers */
+  background: -moz-linear-gradient(left, $start 0%, $stop 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,$start), color-stop(100%,$stop)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left, $start 0%,$stop 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left, $start 0%,$stop 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(left, $start 0%,$stop 100%); /* IE10+ */
+  background: linear-gradient(to right, $start 0%,$stop 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$start', endColorstr='$stop',GradientType=1 ); /* IE6-9 */
+}
+
+//Transitions
+@mixin transition($settings) {
+  -webkit-transition: $settings;
+  -moz-transition: $settings;
+  -ms-transition: $settings;
+  -o-transition: $settings;
+  transition: $settings;
+}
+@mixin no-transition() {
+  -webkit-transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+
+//border-radius
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  -o-border-radius: $radius;
+  border-radius: $radius;
+}
+
+// opacity
+@mixin opacity($ie, $reg) {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$ie})";
+  filter: alpha(opacity=$ie);
+  opacity: $reg;
+}
+
+/*
+ * TRANSFORMATIONS
+ */
+// general transform 
+@mixin transform($settings) {
+  -webkit-transform: $settings;
+  -moz-transform: $settings;
+  -ms-transform: $settings;
+  -o-transform: $settings;
+  transform: $settings;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+// rotate
+@mixin rotate($deg) {
+  -webkit-transform: rotate($deg+deg);
+  -moz-transform: rotate($deg+deg);
+  -ms-transform: rotate($deg+deg);
+  -o-transform: rotate($deg+deg);
+  transform: rotate($deg+deg);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+//translate x,y
+@mixin translate($x,$y) {
+  -webkit-transform: translate($x,$y);
+  -moz-transform: translate($x,$y);
+  -ms-transform: translate($x,$y);
+  -o-transform: translate($x,$y);
+  transform: translate($x,$y);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+//backface-visibility
+@mixin backface-visibility($value) {
+  backface-visibility: $value;
+  -webkit-backface-visibility: $value;
+}
+
+// box-sizing
+@mixin box-sizing($v) {
+  -webkit-box-sizing: $v;
+  -moz-box-sizing: $v;
+  box-sizing: $v;
+}
+
+@mixin prefixer($property, $value) {
+-webkit-#{$property}: $value;
+-moz-#{$property}: $value;
+-ms-#{$property}: $value;
+-o-#{$property}: $value;
+#{$property}: $value;
+}
+
+//Master sprite for retina -- use @include master_sprite(x,y);
+@mixin master_sprite($background-pos) {
+  background: url($master_sprite) no-repeat $background-pos transparent;
+  @media (min--moz-device-pixel-ratio: 1.3),
+         (-o-min-device-pixel-ratio: 2.6/2),
+         (-webkit-min-device-pixel-ratio: 1.3),
+         (min-device-pixel-ratio: 1.3),
+         (min-resolution: 1.3dppx) {
+    // on retina, use image that's scaled by 2:
+    background-image: url($master_sprite_x2);
+    // ensure this matches current lo-res sprite dimensions:
+    background-size: $lores_dimensions;
+  }
+}
+

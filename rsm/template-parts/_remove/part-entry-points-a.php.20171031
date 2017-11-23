@@ -1,0 +1,165 @@
+<?php
+/**
+ RSM - Entry Points - A
+ */
+
+$entry_points_a_section_settings = get_field('entry_points_a_section_settings', 'options');
+$entry_points_a_section_header = get_field('entry_points_a_section_header', 'options');
+$entry_points_a_entry_points = get_field('entry_points_a_entry_points', 'options');
+
+//spill($entry_points_a_section_settings);
+//spill($entry_points_a_section_header);
+
+//---
+// Background CSS setup
+//---
+if($entry_points_a_section_settings['background_style'] != 'none') { ?>
+
+	<style type="text/css">
+
+	<?php	
+	if($entry_points_a_section_settings['background_color']) { 
+		echo '.entry-points-a .section__background-holder { background-color: '.$entry_points_a_section_settings['background_color'].'; }';
+	}
+	if($entry_points_a_section_settings['background_image']) { 
+		$entry_points_a_section_bg_src = wp_get_attachment_image_src($entry_points_a_section_settings['background_image'], 'fullscreen');
+
+		echo '.entry-points-a .section__background-image { background-image: url('.$entry_points_a_section_bg_src[0].'); }';
+	}
+	if($entry_points_a_section_settings['background_image'] && $entry_points_a_section_settings['background_overlay_color']) { 
+
+		if($entry_points_a_section_settings['background_overlay_opacity']) {
+			$calculate_opacity_decimal = ($entry_points_a_section_settings['background_overlay_opacity'] / 100);
+		} else {
+			$calculate_opacity_decimal = 0;
+		}
+		echo '.entry-points-a .section__background-image:after { background-color: '.$entry_points_a_section_settings['background_overlay_color'].'; filter: alpha(opacity='.$entry_points_a_section_settings['background_overlay_opacity'].'); opacity: '.$calculate_opacity_decimal.' }';
+	}
+    ?>
+	
+	</style>
+	<?php
+}
+
+
+
+
+
+// markup
+if( $entry_points_a_entry_points ):
+
+    
+	echo '<section id="'.$entry_points_a_section_settings['id'].'" class="section section--custom-background entry-points-a '.$entry_points_a_section_settings['class'].'">';
+
+        if($entry_points_a_section_header) {
+            echo '<div class="section__header '.$entry_points_a_section_header['alignment'].'"><div class="container">';
+                
+                if($entry_points_a_section_header['title_prefix']) {
+                    echo '<p class="section__title-prefix">'.$entry_points_a_section_header['title_prefix'].'</p>';
+                }
+                if($entry_points_a_section_header['title']) {
+                    echo '<'.$entry_points_a_section_header['title_structure']['tag'].' class="section__title '.$entry_points_a_section_header['title_structure']['class'].'">'.$entry_points_a_section_header['title'].'</'.$entry_points_a_section_header['title_structure']['tag'].'>';
+                }
+                if($entry_points_a_section_header['sub_title']) {
+                    echo '<p class="section__subtitle">'.$entry_points_a_section_header['sub_title'].'</p>';
+                }
+
+            echo '</div></div>'; // .container, .section__header
+        }
+
+        //spill($entry_points_a_entry_points);
+
+		echo '<div class="container">';
+            
+            // loop through rows
+            foreach ( $entry_points_a_entry_points as $entry_point ):
+         		
+            	if($entry_point['image']) {
+            		$has_image_bg_class = 'has-image-bg';
+            	} else {
+            		$has_image_bg_class = null;
+            	}
+            	if( $entry_point['link'] != null ) {
+            		$has_link_class = 'has-link';
+            	} else {
+            		$has_link_class = null;
+            	}
+
+                echo '<div class="col entry-point-holder">';
+                    echo '<div class="entry-point entry-point--'.$entry_point['content_type'].' '.$has_image_bg_class.' '.$has_link_class.'">';
+
+	                    if( $entry_point['content_type'] == 'text-block' ) {
+
+	                   		echo $entry_point['text_content'];
+
+	                    } else {
+
+	                    	$style_att = '';
+
+	                    	if($entry_point['image']) {
+	                    		$background_image = wp_get_attachment_image_src($entry_point['image'], 'entry-point');
+	                    		$style_att .= 'background-image: url('.$background_image[0].');';
+	                    	} 
+
+	                    	if ($entry_point['bg_color']) {
+	                    		$bg_color = $entry_point['bg_color'];
+	                    		$style_att .= 'background-color: '.$bg_color.';';
+	                    	}
+
+	                    	//spill($entry_point);
+	                    	// anchor open
+	                    	if( $entry_point['link'] != null ) {
+	                    		echo '<a class="anchor" href="'.$entry_point['link']['url'].'" style="'.$style_att.'">';
+	                    	} else {
+	                    		echo '<span class="anchor" style="'.$style_att.'">';
+	                    	}
+	                    		
+	                    		echo '<span class="entry-point__inner">';
+	                    		
+		                    		if($entry_point['icon_html']) {
+		                    			echo '<span class="entry-point__icon">'.$entry_point['icon_html'].'</span>';
+		                    		}
+		                    		if($entry_point['title']) {
+		                    			echo '<span class="entry-point__title">'.$entry_point['title'].'</span>';
+		                    		}
+		                    		if($entry_point['subtitle']) {
+		                    			echo '<span class="entry-point__subtitle">'.$entry_point['subtitle'].'</span>';
+		                    		}
+
+	                    		echo '</span>';
+
+	                    	// anchor close
+	                    	if(!$entry_point['link']) {
+	                    		echo '</span>';
+	                    	} else {
+	                    		echo '</a>';
+	                    	}
+
+	                    }
+
+                    echo '</div>';
+                echo '</div>';  
+
+            endforeach;
+            
+        echo '</div>'; // .container
+
+        // custom section background
+        if( $entry_points_a_section_settings['background_style'] != 'none' && !empty($entry_points_a_section_settings['background_image']) ) {
+
+	        echo '<div class="section__background-holder">';
+				
+				if( $entry_points_a_section_settings['background_style'] == 'parallax' ) {
+
+					echo '<div class="section__background-image rellax" data-rellax-speed="-2" data-rellax-percentage="0.5"></div>';
+				} 
+				elseif ( $entry_points_a_section_settings['background_style'] == 'image' ) {
+
+					echo '<div class="section__background-image"></div>';
+				}
+				
+			echo '</div>';
+		}
+
+	echo '</section>';
+endif;

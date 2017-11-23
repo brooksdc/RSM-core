@@ -1,0 +1,134 @@
+/*
+structure:
+_____________________
+|logo| |nav| |widget|
+*/
+
+
+.header-layout-2 {
+	
+	&:after {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		right: 0;
+		height: 5px;
+	}
+	.btn {
+		color: #fff;
+
+		&:hover,
+		&:focus {
+			color: #fff;
+		}
+	}
+}
+
+@media (max-width: $mobile-header-on) {
+	.header-layout-2 {
+		
+		&:after {
+			height: 3px;
+		}
+		.header-dropin-1 {
+			display: none;
+		}
+		.site-header__logo {
+			margin:  0 auto;
+		}
+	}
+}
+
+@media (min-width: $desktop-header-on) {
+	
+	.header-layout-2 {
+		
+		
+		// main
+		.site-header__main {
+			padding-top: 0; //$gutter / 2;
+			padding-bottom: 0; //$gutter / 2;
+		}
+		.site-header__main > .container {
+			display: table;
+			width: 100%;
+		}
+
+		.site-header__branding,
+		.site-header__navigation,
+		.site-header__cta {
+			display: table-cell;
+			vertical-align: middle;
+		}
+
+		.site-header__branding,
+		.site-header__cta {
+			text-align: left;
+			// Get the width of the larger end component (logo or widget) and set here.
+			// This will give the nav free reign to expand and reduce the risk of breaking into two lines.
+			width: 150px + $gutter; 
+		}
+		.site-header__navigation {
+			text-align: center;
+			width: auto;
+		}
+		
+		.site-header__navigation > .menu > li > a {
+			@include transition(line-height $ease);
+			line-height: 75px;
+		}
+		.site-header__cta {
+			text-align: right;
+		}
+
+	}
+
+}
+
+/* # Header Fixed / Sticky / Scrolling Settings
+  -- These rules depend on the header style being used.
+--------------------------------------------------------------*/
+
+@media (min-width: $sm) {
+	.header-layout-2 {	
+		
+		&.sticky {
+			position: fixed;
+			background: #fff;
+			z-index: 10;
+			top: 0;
+			left: 0;
+			right: 0;
+			box-shadow: 0 2px 5px rgba(0,0,0,.2);
+		}
+
+		// change styles of header at defined offset
+		&.is-scrolling {
+			//background: lightgreen;
+
+			.site-header__retina-logo,
+			.site-header__standard-logo {
+				width: 60px;
+			}
+			.site-header__svg-logo > svg {
+				width: 60px;
+			}
+
+			.site-header__navigation > .menu > li > a {
+				line-height: 45px;
+			}
+		}
+		// transition back to normal (scrolled back to top)
+		// This is class is temporary, but should "reset" the styles
+		// that have changed from the is-scrolling class above.
+		&.is-scrolling.transition-out {
+			//background: $header-background-color;
+
+			.site-header__logo {
+				width: auto;
+			}
+		}
+	}
+}

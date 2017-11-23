@@ -1,0 +1,102 @@
+/*
+ * .social-links
+ * uses font-awesome icons: http://fortawesome.github.io/Font-Awesome/icons/#brand
+ * MAKE SURE TO LINK UP FONTAWESOME LIBRARY!
+ */
+
+/* BRAND SWATCHES */
+$facebook: #3b5998;
+$twitter: #00aced;
+$google-plus: #dd4b39;
+$youtube: #bb0000;
+$linkedin: #007bb6;
+$instagram: #517fa4;
+$pinterest: #cb2027;
+$vine: #00bf8f;
+$flickr: #ff0084;
+$vimeo: #aad450;
+$yelp: #af0606;
+$email: #333;
+
+
+/*= GENERAL ICON STRUCTURE & SHAPES 
+------------------------------------------------------------*/
+
+/* defaults */
+.rsm-social-links {
+	@include reset_list();
+	margin: 0 (-$social-icon-spacing);
+	line-height: 1;
+	font-size: 0;
+
+	li {
+		@include inline-block();
+		margin: $social-icon-spacing;
+		padding: 0!important;
+	}
+	a {
+		text-decoration: none;
+		position: relative;
+		display: block;
+		font-size: $social-icon-fontsize;
+		width: $social-icon-width;
+		height: $social-icon-height;
+		line-height: $social-icon-lineheight;
+		@include border-radius($social-icon-radius);
+		text-align: center;
+	}
+	.fallback-text {
+		display: inline-block;
+		text-align: left;
+		text-indent: -9999px;
+		height: 0;
+		width: 0;
+	}
+}
+
+
+
+/*= GENERAL ICON BRAND SETUP 
+------------------------------------------------------------*/
+.rsm-social-links {
+
+	// facebook
+	.facebook { color: $facebook; }
+	.facebook:hover { color: darken($facebook, 10%); }
+
+	// twitter
+	.twitter { color: $twitter; }
+	.twitter:hover { color: darken($twitter, 10%); }
+
+	// google-plus
+	.google-plus { color: $google-plus; }
+	.google-plus:hover { color: darken($google-plus, 10%); }
+
+	// instagram
+	.instagram { color: $instagram; }
+	.instagram:hover { color: darken($instagram, 10%); }
+
+	// yelp
+	.yelp { color: $yelp; }
+	.yelp:hover { color: darken($yelp, 10%); }
+
+	// email
+	.email { color: $email; }
+	.email:hover { color: darken($email, 10%); }
+
+	// pinterest
+	.pinterest { color: $pinterest; }
+	.pinterest:hover { color: darken($pinterest, 10%); }
+
+	// linked in
+	.linkedin { color: $linkedin; }
+	.linkedin:hover { color: darken($linkedin, 10%); }
+
+	// youtube
+	.youtube { color: $youtube; }
+	.youtube:hover { color: darken($youtube, 10%); }
+
+}
+
+
+

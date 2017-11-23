@@ -1,0 +1,529 @@
+/* 
+ Unique styles for client
+ */
+
+/* # General Structure
+--------------------------------------------------------------*/
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+	text-transform: uppercase;	
+}
+
+
+.section {
+	text-align: center;
+	
+	&.fullwidth,
+	&.full-width {
+
+		.container {
+			max-width: 100%;
+		}
+	}
+	.section__header {
+		text-align: center;
+	}
+}
+
+.home .site-content {
+	padding-top: 0;
+}
+.site-content {
+	//padding-bottom: 0;
+}
+
+
+
+
+/* # Buttons
+--------------------------------------------------------------*/
+
+// sliding bg button
+.btn-outline {
+	position: relative;
+    
+    //default
+	&:before {
+		content: "";
+		background: $text-color;
+		position: absolute;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		//height: 0;
+		z-index: -1;
+		@include opacity(0,0);
+		@include transition(all $cubic);
+	}
+
+	&:hover,
+	&:focus {
+		color: #fff;
+		border-color: $text-color;
+
+		&:before {
+			//height: 100%;
+			@include opacity(100,1);
+		}
+	}
+
+	// primary
+	&.btn-primary {
+		&:before {
+			background: $brand-primary;
+		}
+
+		&:hover,
+		&:focus {
+			color: #fff;
+			border-color: $brand-primary;
+
+			&:before {
+				width: 100%;
+			}
+		}
+	}
+
+	// secondary
+	&.btn-secondary {
+		&:before {
+			background: $brand-secondary;
+		}
+
+		&:hover,
+		&:focus {
+			color: #fff;
+			border-color: $brand-secondary;
+
+			&:before {
+				width: 100%;
+			}
+		}
+	}
+
+	// accent
+	&.btn-accent {
+		&:before {
+			background: $brand-accent;
+		}
+
+		&:hover,
+		&:focus {
+			color: #fff;
+			border-color: $brand-accent;
+
+			&:before {
+				width: 100%;
+			}
+		}
+	}
+
+	//default reverse
+	&.btn-reverse {
+		&:before {
+			background: #fff;
+		}
+
+		&:hover,
+		&:focus {
+			color: $text-color;
+			border-color: #fff;
+
+			&:before {
+				width: 100%;
+			}
+		}
+		&.btn-primary {
+			&:hover,
+			&:focus {
+				color: $brand-primary;
+			}
+		}
+		&.btn-secondary {
+			&:hover,
+			&:focus {
+				color: $brand-secondary;
+			}
+		}
+		&.btn-accent {
+			&:hover,
+			&:focus {
+				color: $brand-accent;
+			}
+		}
+	}
+}
+input.btn-outline.btn-reverse {
+	
+	&:hover {
+		background: #fff !important;
+	}
+}
+
+
+/* # Header
+--------------------------------------------------------------*/
+
+.header-layout-3 {
+	
+	@media (max-width: $mobile-header-on) {
+		.site-header__main {
+			padding-left: 0;
+			position: relative;
+		}
+		.site-header__branding {
+			width: 100px;
+		}
+		.site-header__navigation {
+			display: none;
+		}
+		.site-header__mobile-nav__toggle {
+			height: 35px;
+			position: relative;
+			right: auto;
+			top: auto;
+			left: auto;
+			@include transform(none);
+			border: 1px solid #fff !important;
+			
+			.bar {
+				background: #fff;
+				height: 1px;
+			}
+		}
+
+		.site-header__mobile-nav {
+			position: absolute;
+			z-index: 99;
+			right: 2px; //acount for border
+			top: 0;
+			padding: 20px 20px 0 0;
+			
+			.site-header__mobile-nav__dropdown {
+				position: absolute;
+				z-index: 1;
+				top: 0;
+				right: 0;
+				width: 200px;
+				text-align: center;
+				padding-top: 30px;
+				border: 1px solid #303030;
+				background: #000;
+				visibility: hidden;
+				@include opacity(0,0);
+				@include transform(translate3d(0,10px,0));
+				@include transition(all $cubic);
+				
+				.menu {
+					display: block !important;
+					margin: 0;
+					padding: 0;
+
+					li {
+						display: block;
+					}
+					li a {
+						display: block;
+						line-height: 1;
+						padding: 15px;
+						background: #000;
+						color: #fff;
+
+						&:hover,
+						&:focus {
+							background: #303030;
+							color: $brand-secondary;
+							text-decoration: none;
+						}
+					}
+					.sub-menu {
+						margin: 0;
+						padding: 0;
+					}
+				}
+				#mobile-primary {
+					margin-top: 10px;
+				}
+			}
+
+			&.dropdown-visible .site-header__mobile-nav__dropdown {
+				visibility: visible;
+				@include opacity(100,1);
+				@include transform(translate3d(0,0,0));
+			}
+		}	
+	}
+	
+	@media (min-width: $desktop-header-on) {
+		.site-header__mobile-nav {
+			display: none;
+		}
+	}
+}
+
+@media (min-width: $xl) and (min-height: 600px) {
+	
+	.header-layout-3 {
+		
+		.site-header__branding {
+			width: 250px + $gutter; 
+		}
+	}
+}
+
+.masthead-disabled {
+	
+	.header-layout-3 {
+		background: #000;	
+
+		.site-header__navigation > .menu li > ul li a {
+			background: #222;
+		}	
+	}
+	
+}
+
+
+/* Sticky header settings */
+
+@media (min-width: $sm) {
+	
+	// you should add this padding to whatever element is at the top of the page.
+
+	.inner-page .entry-masthead,
+	.inner-page .entry-masthead-placeholder {
+		padding-top: 110px; //match fixed header height;
+	}
+	.rsm-hero {
+		padding-top: 0;
+	}
+}
+
+
+/* # Buttons
+--------------------------------------------------------------*/
+.rsm-hero {
+
+	.rsm-hero__title {
+		font-size: 2.5rem;
+		line-height: 1.15;
+		text-shadow: none;
+		font-weight: 200;
+		text-transform: uppercase;
+	}
+	.rsm-hero__subtitle {
+		text-shadow: none;
+		font-size: 1.1rem;
+		font-style: normal;
+		line-height: 1.5;
+		margin-top: 25px;
+	}
+	.rsm-hero__message-holder {
+		max-width: $container-max-narrow;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.rsm-hero__button-holder {
+		margin-top: 30px;
+	}
+	.rsm-hero__button {
+
+		&:before {
+			background: #000;
+		}
+		&:hover,
+		&:focus {
+			border-color: #000;
+			color: #fff !important;
+		}
+	}
+	
+	@media (min-width: $lg) {
+		
+		.rsm-hero__title {
+			font-size: 6rem;
+		}
+		.rsm-hero__subtitle {
+			font-size: 1.28rem;
+		}
+	}
+
+	@media (min-width: $xl) {
+		.rsm-hero__title {
+			font-size: 7rem;
+		}
+	}
+}
+
+
+/* # Misc elements
+--------------------------------------------------------------*/
+
+#welcome {
+	
+	.section__content {
+		max-width: 900px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+/* # Entry points
+--------------------------------------------------------------*/
+
+#services-sectors {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.entry-points-style-d {
+
+	
+	.entry-point-holder {
+		padding: 0;
+	}
+	.entry-point__title {
+		@include font_1();
+		text-transform: uppercase;
+		font-weight: 300;
+		font-size: 2.5rem;
+	}
+}
+
+/* # team Member profiles
+--------------------------------------------------------*/
+
+.rsm-team-member {
+	max-width: 230px;
+	margin-left: auto;
+	margin-right: auto;
+
+	.rsm-team-member__name {
+		text-transform: unset;
+	}
+	.rsm-team-member__position {
+		font-size: 1rem;
+	}
+}
+
+#team.section--custom-post-query {
+	
+	.section_body > .container > .row {
+		text-align: center;
+		font-size: 0;
+	}
+	.custom-query-item {
+		display: inline-block;
+		vertical-align: middle;
+		float: none;
+		font-size: 1rem;
+	}
+}
+
+/* # Footer
+--------------------------------------------------------------*/
+
+.site-footer {
+	padding-top: 0;
+
+	.container {
+		max-width: 100%;
+	}
+
+	.site-footer__top {
+		padding: 170px 0 95px; 
+		background: url('../images/geometric-bg-black.jpg') repeat center #000;
+	}
+	.site-footer__bottom {
+		border-top: none;
+		font-size: $footer-font-size;
+		padding: 35px 0;
+	}
+	.site-footer__top .rsm-primary-address {
+		text-align: left;
+		font-size: 1.3rem;
+		line-height: 1.4;
+		@include font_1();
+		
+		.address-name {
+			display: block;
+			text-transform: uppercase;
+		}
+		.address-street {
+			display: block;
+		}
+
+		&.has-map-marker {
+			padding-top: 65px;
+			position: relative;
+
+			&:before {
+				content: "";
+				display: block;
+				width: 30px;
+				height: 44px;
+				background: url('../images/map@2x.png') no-repeat 0 0 transparent;
+				-webkit-background-size: 100% auto;
+				background-size: 100% auto;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+		}
+	}
+	.site-footer__bottom .rsm-primary-address {
+		.address-name {
+			display: block;
+			text-transform: uppercase;
+		}
+	}
+
+	@media (min-width: $sm) {
+		.site-footer__top .site-footer__col {
+			float: left;
+
+			&.footer-dropin-1 {
+				width: 40%;
+			}
+			&.footer-dropin-2 {
+				width: 60%;
+			}
+		}
+	}
+}
+
+/* contact form */
+.wpcf7-form {
+	text-align: left;
+
+	.form-group {
+		label {
+			text-align: left;
+		}
+	}
+
+	@media (min-width: $sm) {
+
+		.form-group {
+			@include clearfix();
+
+			& > label,
+			& > .wpcf7-form-control-wrap {
+				display: block;
+				float: left;
+			}
+			& > label {
+				width: 130px;
+				line-height: 1;
+				padding: 15px 0 0
+			}
+			& > .wpcf7-form-control-wrap {
+				width: calc(100% - 130px);
+			}
+
+			&.submit-holder {
+				padding-left: 130px;
+			}
+		}
+	}
+}

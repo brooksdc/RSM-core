@@ -1,0 +1,208 @@
+/* # Hero Banner A (Owl Carousel)
+--------------------------------------------------------------*/
+$hero_banner_height_small: 350px;
+$hero_banner_height_medium: 550px;
+$hero_banner_height_large: 750px;
+
+
+.rsm-hero-banner-a {
+	background-color: $off-black;
+	position: relative;
+
+	// message
+	.rsm-hero__message-holder {
+		position: absolute;
+		top: 55%;
+		left: 60px;
+		right: 60px;
+		@include transform(translate(0,-50%));
+		z-index: 2;
+		text-align: center;
+	}
+	.rsm-hero__message {
+		color: #fff;
+	}
+	.rsm-hero__title-prefix {
+		font-size: .825rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: .5px;
+		margin: 0 0 5px;
+		line-height: 1;
+	}
+	.rsm-hero__title {
+		margin: 0;
+		font-weight: 900;
+		font-size: 3.3rem;
+		text-shadow: 0 2px 5px rgba(0,0,0,.2);
+	}
+	.rsm-hero__subtitle {
+		margin: 10px 0 0;
+		font-size: 2rem;
+		line-height: 1;
+		font-style: italic;
+		font-weight: 400;
+		text-shadow: 0 2px 5px rgba(0,0,0,.2);
+	}
+	.rsm-hero__button-holder {
+		margin: 2rem 0 0;
+	}
+
+	// carousel setup
+	.owl-carousel {
+		position: relative;
+		
+		&:before {
+			content: "";
+			display: block;
+			position: absolute;
+			top: 0;
+			right: 0;
+			left: 0;
+			bottom: 0;
+			background: $brand-accent;
+			@include opacity(5,.05);
+			z-index: 1;
+		}
+
+		.slide {
+			height: $hero_banner_height_small;
+			background-position: center;
+			background-repeat: no-repeat;
+			-webkit-background-size: cover;
+			background-size: cover;
+		}
+
+		.owl-prev,
+		.owl-next {
+			position: absolute;
+			top: 50%;
+			@include transform(translate(0,-50%));
+			font-size: 60px;
+			@include opacity(50,.5);
+			line-height: .5;
+			color: #fff;
+			z-index: 2;
+		}
+		.owl-prev {
+			left: $gutter;
+		}
+		.owl-next {
+			right: $gutter;
+		}
+	}
+	
+	// match height while loading
+	&.no-fouc {
+		height: $hero_banner_height_small;
+		background-image: url('../images/loader-826-light.svg');
+		background-position: center;
+		background-size: auto;
+		background-repeat: no-repeat;
+	}
+	
+	@media (max-width: $xs) {
+		&:before {
+			content: "";
+			display: block;
+			position: absolute;
+			top: 0;
+			right: 0;
+			left: 0;
+			height: 130px;
+			background: -moz-linear-gradient(top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+			background: -webkit-linear-gradient(top, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0) 100%);
+			background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0) 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc000000', endColorstr='#00000000',GradientType=0 );
+			z-index: 2;
+		}
+		
+		.rsm-hero__message-holder {
+			left: $gutter;
+			right: $gutter;
+		}
+		.rsm-hero__title-prefix {
+			font-size: .7rem;
+		}
+		.rsm-hero__title {
+			font-size: 1.75rem;
+		}
+		.rsm-hero__subtitle {
+			font-size: 1rem;
+		}
+		.owl-next,
+		.owl-prev {
+			display: none;
+		}
+	}
+
+	@media (min-width: $sm) {
+		
+		&.use-boxed-layout {
+			background-color: $body-background-color;
+
+			.owl-carousel {
+				max-width: $container-max;
+				margin-left: auto;
+				margin-right: auto;
+				padding-left: $gutter-width;
+				padding-right: $gutter-width;
+
+				&:before {
+					left: $gutter-width;
+					right: $gutter-width;
+				}
+			}
+		}
+		.owl-carousel {
+			.slide {
+				height: $hero_banner_height_medium;
+			}
+		}
+		&.no-fouc {
+			height: $hero_banner_height_medium;
+		}
+	}
+	@media (min-width: $lg) and (min-height: 950px) {
+		.owl-carousel {
+			.slide {
+				height: $hero_banner_height_large;
+			}
+		}
+		&.no-fouc {
+			height: $hero_banner_height_large;
+		}
+	}
+}
+
+
+// OPTION:
+// Set FULLHEIGHT on parent elements so banner can be fullheight.
+// Is most accusrate if the site-header is fixed or absolute;
+@media (min-width: $sm) and (min-height: 600px) {
+	
+	html {
+		height: 100%;
+	}
+	body.has-full-height-hero { 
+		height: 100%;
+
+		#page,
+		.rsm-hero-banner-a,
+		.rsm-hero-banner-a .owl-carousel,
+		.rsm-hero-banner-a .owl-stage-outer,
+		.rsm-hero-banner-a .owl-stage,
+		.rsm-hero-banner-a .owl-item {
+			height: 100%;
+		}
+
+		.rsm-hero-banner-a .owl-carousel .slide {
+			height: 100%;
+		}
+
+		#main {
+			//setting background-color this because the standard #page element collapses to only 100% in this mode.
+			background-color: $body-background-color;
+		}
+	}
+}

@@ -1,0 +1,72 @@
+/*
+ Standard list style with header block.
+ */
+ 
+.rsm-local-menu {
+
+	.rsm-local-menu__nav ul {
+		margin: 0;
+		list-style: none;
+		padding: 0;
+	}
+
+	.rsm-local-menu__nav ul li {
+		display: block;
+		position: relative;
+		font-size: .825rem;
+		font-weight: 400;
+		
+		&:before {
+			content: '\f105'; //'\2022';
+			@include font_icon();
+			display: inline-block;
+			vertical-align: middle;
+			position: absolute;
+			top: $gutter;
+			left: $gutter;
+			line-height: 1;
+		}
+
+		a {
+			display: block;
+			line-height: 1.1;
+			padding: $gutter;
+			border-bottom: 1px solid #eee;
+			color: $text-color;
+		}
+		a:hover {
+			text-decoration: none;
+			color: $link-color;
+		}
+
+		&:not(.menu__header) a {
+			padding-left: $gutter * 2;
+		}
+
+		&.menu__header {
+			text-transform: uppercase;
+			letter-spacing: .5px;
+
+			&:before {
+				content: none;
+			}
+			a {
+				background: #fff;
+			}
+		}
+
+		.children li {
+
+			&:before {
+				left: $gutter * 2;
+			}
+			a {
+				padding-left: $gutter * 3;
+			}
+		}
+
+		&.current_page_item {
+			font-weight: 700;
+		}
+	}
+}

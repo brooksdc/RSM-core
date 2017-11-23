@@ -1,0 +1,73 @@
+<?php
+/**
+ * RSM - Mosaic Gallery
+ */
+
+global $post;
+
+// check if data is being passed in from content-acf-builder-page.php
+if(!empty($page_builder_mosaic)){
+
+	$rsm_mosaic_images = $page_builder_mosaic;
+	$mosaic_section_settings = get_sub_field('section_settings');
+	$mosaic_section_header = get_sub_field('section_header');
+	$include_section_markup = true;
+
+} else {
+
+	$rsm_mosaic_images = get_field('rsm_mosaic_images');
+	$mosaic_section_settings = false;
+	$mosaic_section_header = false;
+	$include_section_markup = false;
+
+}
+
+if($rsm_mosaic_images):
+
+	// open section markup
+	if($include_section_markup) {
+		echo '<section id="'.$mosaic_section_settings['id'].'" class="section section--mosaic-gallery '.$mosaic_section_settings['class'].'">';
+
+	        if($mosaic_section_header) {
+	            echo '<div class="section__header '.$mosaic_section_header['alignment'].'"><div class="container">';
+	                
+	                if($mosaic_section_header['title_prefix']) {
+	                    echo '<p class="section__title-prefix">'.$mosaic_section_header['title_prefix'].'</p>';
+	                }
+	                if($mosaic_section_header['title']) {
+	                    echo '<'.$mosaic_section_header['title_structure']['tag'].' class="section__title '.$mosaic_section_header['title_structure']['class'].'">'.$mosaic_section_header['title'].'</'.$mosaic_section_header['title_structure']['tag'].'>';
+	                }
+	                if($mosaic_section_header['sub_title']) {
+	                    echo '<p class="section__subtitle">'.$mosaic_section_header['sub_title'].'</p>';
+	                }
+
+	            echo '</div></div>'; // .container, .section__header
+	        }
+
+			echo '<div class="section__content"><div class="container">';
+	}
+
+
+			//standard gallery content
+			echo '<div class="rsm-mosaic-gallery gallery flex-container">';
+				
+				foreach($rsm_mosaic_images as $img) {
+					//spill($img);
+					echo '<figure class="rsm-mosaic-gallery__item gallery-item flex-col">';
+						echo '<a class="anchor" href="'.$img['sizes']['large'].'" title="'.$img['caption'].'" style="background-image: url('.$img['sizes']['medium'].');">';
+							echo '<span class="sr-only">'.$img['alt'].'</span>';
+						echo '</a>';
+					echo '</figure>';
+				}
+
+			echo '</div>'; //rsm-mosaic-gallery
+			
+
+	// close section markup
+	if($include_section_markup){
+
+			echo '</div></div>'; //.section__content, .container
+		echo '</section>';
+	}
+
+endif;

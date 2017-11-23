@@ -1,0 +1,139 @@
+/* 
+ Entry Points -- Style C
+ */
+.entry-points-style-c {
+	
+	.entry-point-holder {
+		width: 100%;
+		margin: 0 0 ($gutter * 2);
+	}
+
+	.entry-point {
+
+		.anchor {
+			display: block;
+			text-align: left;
+			color: $text-color;
+			@include border-radius(5px);
+		}
+
+		.entry-point__top,
+		.entry-point__bottom {
+			display: block;
+		}
+
+		.entry-point__top {
+			height: 250px;
+			width: 100%;
+			position: relative;
+			overflow: hidden;
+			@include border-radius(5px);
+		}
+
+		&.has-bottom-content {
+			.entry-point__top {
+				@include border-radius(5px 5px 0 0);
+			}
+		}
+
+		.entry-point__image {
+			background-repeat: no-repeat;
+			background-position: center;
+			-webkit-background-size: cover;
+			background-size: cover;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			z-index: 0;
+		}
+		.entry-point__title {
+			display: block;
+			color: #fff;
+			position: absolute;
+			z-index: 2;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			margin: 0;
+			padding: 20px 60px 20px 30px;
+			font-weight: 300;
+			line-height: 1.1;
+			min-height: 105px;
+			font-size: 1.8rem;
+
+			&:before {
+				content: "";
+				background: #fff;
+				@include opacity(60,.6);
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				z-index: -1;
+				@include transition(all $ease);
+			}
+			&:after {
+				content: '\f105';
+				@include font_icon();
+				line-height: 1;
+				position: absolute;
+				right: 30px;
+				color: #fff;
+				bottom: 22px;
+				@include transform(translate3d(0,0,0));
+				@include transition(transform $ease);
+			}
+		}
+		.entry-point__bottom {
+			padding: 20px 30px;
+			background: #fff;
+			min-height: 115px;
+			@include border-radius(0 0 5px 5px);
+		}
+		.entry-point__subtext {
+			font-size: 1rem;
+			display: block;
+		}
+
+		.anchor:hover {
+			text-decoration: none;
+
+			.entry-point__title:before {
+				@include opacity(90,.9);
+			}
+			.entry-point__title:after {
+				@include transform(translate3d(10px,0,0));
+			}
+		}
+	}
+
+	@media (min-width: $sm) and (max-width: $md - 1px) {
+		.entry-point-holder {
+			width: 50%;
+
+			/* &:nth-child(2n+1){
+				clear: left;
+			} */
+		}
+	}
+
+	@media (min-width: $sm) {
+		.entry-point__top {
+			height: 320px;
+		}
+	}
+
+	@media (min-width: $md) {
+		.entry-point-holder {
+			width: 25%;
+
+			/* &:nth-child(4n+1){
+				clear: left;
+			} */
+		}
+	}
+}

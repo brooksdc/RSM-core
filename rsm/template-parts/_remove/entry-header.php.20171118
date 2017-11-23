@@ -1,0 +1,51 @@
+<?php
+
+//---
+// Determine post ID to use.
+// Using $post_id as a vairable so specific IDs can be used conditionally, if required. (For example, if is blog page, etc.)
+//---
+$post_id = $post->ID;
+
+//check if 'use masthead' option is on
+$rsm_page_use_masthead = get_field('rsm_page_use_fullwidth_masthead', $post_id);
+$rsm_page_masthead_disable = get_field('rsm_page_disable_masthead', $post_id); //overrides global
+$rsm_global_use_masthead = get_field('rsm_global_use_masthead_for_all_pages', 'option');
+
+// PAGE TITLE DISPLAY LOGIC.
+// if global masthead is FALSE, display this title.
+// if page masthead is TRUE, regardless of global setting, DON'T display this title.
+// if page masthead is set to DISABLED, display the page title.
+if($rsm_global_use_masthead == false && $rsm_page_use_masthead == false) {
+	$display_page_title = true;
+}
+elseif($rsm_global_use_masthead == true && $rsm_page_use_masthead == false && $rsm_page_masthead_disable == false) {
+	$display_page_title = false;
+}
+elseif($rsm_page_use_masthead == true && $rsm_page_masthead_disable == false) {
+	$display_page_title = false;
+}
+else {
+	$display_page_title = true;
+}
+
+?>
+
+<header class="entry-header">
+	
+	<?php if(is_page_template('page-acf-fullwidth-builder.php')) {
+		echo '<div class="container">';
+	} ?>
+
+	<?php if( $display_page_title ) {
+		echo '<h1 class="entry-title">'.get_the_title($post_id).'</h1>';
+	} ?>
+
+	<?php if(is_page_template('page-acf-fullwidth-builder.php')) {
+		echo '</div>'; //.container
+	} ?>
+	
+
+</header><!-- .entry-header -->
+
+
+<?php get_template_part('template-parts/breadcrumbs'); ?>

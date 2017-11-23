@@ -1,0 +1,24 @@
+/*
+ Adding these styles to the editor so there some simple reference of certain HTMl element sbeing used.
+ */
+
+p.lead {
+	font-size: 20px;
+}
+
+.btn {
+	display: inline-block;
+	padding: 10px;
+}
+.btn.btn-primary {
+	background: #000;
+	color: #fff;
+}
+.btn.btn-secondary {
+	background: #444;
+	color: #fff;
+}
+.btn.btn-accent {
+	background: #777;
+	color: #fff;
+}
