@@ -1,0 +1,62 @@
+{
+    "key": "group_59fe35f7c27a3",
+    "title": "MENU ITEM: Custom Styles",
+    "location": [
+        [
+            {
+                "param": "nav_menu_item",
+                "operator": "==",
+                "value": "all"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "field",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1511445161,
+    "fields": [
+        {
+            "key": "field_59fe360ac0a02",
+            "label": "Icon",
+            "name": "rsm_menu_item_icon",
+            "type": "text",
+            "instructions": "Enter the name of a Font Awesome icon. Include the fa- prefix.\r\nex. <b>fa-shopping-cart<\/b>",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_59fe3cb0bc0c9",
+            "label": "Button Classes",
+            "name": "rsm_menu_item_button_classes",
+            "type": "text",
+            "instructions": "Add custom button classes to make this link look like a standard button.<br>\r\nex. <b>btn btn-primary<\/b>",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ]
+}

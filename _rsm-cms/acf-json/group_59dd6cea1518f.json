@@ -1,0 +1,149 @@
+{
+    "key": "group_59dd6cea1518f",
+    "title": "WIDGET: CTA Button Group",
+    "location": [
+        [
+            {
+                "param": "widget",
+                "operator": "==",
+                "value": "rsm_ctabuttongroup_widget"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1511445164,
+    "fields": [
+        {
+            "key": "field_59dda882d6cfe",
+            "label": "Choose button style",
+            "name": "rsm_cta_btn_group_choose_style",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "btn-default": "Default",
+                "btn-primary": "Primary",
+                "btn-secondary": "Secondary",
+                "btn-accent": "Accent"
+            },
+            "default_value": [
+
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 1,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        },
+        {
+            "key": "field_59dda8e6d6cff",
+            "label": "Button text",
+            "name": "rsm_cta_btn_group_btn_text",
+            "type": "textarea",
+            "instructions": "REQUIRED. Can use HTML.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 1,
+            "new_lines": ""
+        },
+        {
+            "key": "field_59dda934d6d00",
+            "label": "Button URL",
+            "name": "rsm_cta_btn_group_btn_url",
+            "type": "link",
+            "instructions": "REQUIRED.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_59ddaa29ec0ca",
+            "label": "Additional Button Classes",
+            "name": "rsm_cta_btn_group_extra_btn_classes",
+            "type": "text",
+            "instructions": "Optionally add more classes to this button.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_59ddaddabd5de",
+            "label": "Link Target",
+            "name": "rsm_cta_btn_group_link_target",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "_self": "Same (default)",
+                "_blank": "New Window"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "_self",
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "field_59dda957d6d01",
+            "label": "Text Below",
+            "name": "rsm_cta_btn_group_text_below",
+            "type": "textarea",
+            "instructions": "This will be placed directly below the button. HTML allowed.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 2,
+            "new_lines": ""
+        }
+    ]
+}

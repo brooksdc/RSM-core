@@ -1,0 +1,204 @@
+{
+    "key": "group_5916412256008",
+    "title": "OPTIONS: GOOGLE MAP API",
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-global-template-parts"
+            }
+        ]
+    ],
+    "menu_order": 60,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "Options Panel: Global Template Parts",
+    "modified": 1511445166,
+    "fields": [
+        {
+            "key": "field_5916412262db2",
+            "label": "Map API",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5916412262dc7",
+            "label": "IMPORTANT!",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "You can setup a custom Google Map here if you have an API key for this domain. Use your Google Maps API key here to display a dynamic Google map and location marker.\r\n\r\nCreate an API key in the <a href=\"https:\/\/www.google.ca\/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&ved=0ahUKEwj_hoGVz6vSAhUDxmMKHS-uAm4QFggaMAA&url=https%3A%2F%2Fconsole.developers.google.com%2F&usg=AFQjCNF0eH059mv86nMIlRmfsf42kde-wA\" target=\"_blank\">Google API Console<\/a>. Read more <a href=\"https:\/\/developers.google.com\/maps\/documentation\/javascript\/get-api-key\" target=\"_blank\">documentation<\/a>",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_5916412262ddc",
+            "label": "Google Map JS API Key",
+            "name": "google_map_api_key",
+            "type": "text",
+            "instructions": "Find or create your API key in the Google Console, <a href=\"https:\/\/console.developers.google.com\/apis\/credentials\" target=\"_blank\">here<\/a>. Instructions on creating an API key, <a href=\"https:\/\/developers.google.com\/maps\/documentation\/javascript\/get-api-key\" target=\"_blank\">here<\/a>.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "API Key....",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5916412262df2",
+            "label": "Google Map Theme Style",
+            "name": "google_map_theme_style",
+            "type": "textarea",
+            "instructions": "You can create custom colour schemes for the Google map. Go <a href=\"https:\/\/snazzymaps.com\/style\/134\/light-dream\" target=\"_blank\">here<\/a> to find\/create and paste the code here.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_5916412262e07",
+            "label": "Google Map Zoom Level",
+            "name": "google_map_zoom",
+            "type": "text",
+            "instructions": "Pick a number between 8 and 15 (the higher the number, the closer the zoom).<br>You can experiment with other numbers but this is a good range. (Default: 12).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5916412262e1c",
+            "label": "Google Map Location Marker -- LATITUDE",
+            "name": "google_map_lat",
+            "type": "text",
+            "instructions": "Enter the location latitude here. Find the coordinates of your address <a href=\"http:\/\/www.gps-coordinates.net\/\" target=\"_blank\">here<\/a>",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5916412262e31",
+            "label": "Google Map Location Marker -- LONGITUDE",
+            "name": "google_map_long",
+            "type": "text",
+            "instructions": "Enter the location longitude here. Find the coordinates of your address <a href=\"http:\/\/www.gps-coordinates.net\/\" target=\"_blank\">here<\/a>",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5916412262e6d",
+            "label": "Show Map Marker?",
+            "name": "google_map_show_marker",
+            "type": "true_false",
+            "instructions": "If this is disabled, the map will use the location coordinates as the<br>center point intead of showing the marker on the map.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5916417687662",
+            "label": "Shortcodes",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_59c543d8d8603",
+            "label": "Map Shortcode",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "You can use this shortcode to display the Google Map within the wordpress content.\r\n\r\n<div class=\"shortcode-well\">[rsm_google_map]<\/div>\r\n\r\n<small><em>*DEVELOPERS NOTE: This shortcode function depends on various field names. Don't change them!<\/em><\/small>",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        }
+    ]
+}

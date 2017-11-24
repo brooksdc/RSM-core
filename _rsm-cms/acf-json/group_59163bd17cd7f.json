@@ -1,0 +1,187 @@
+{
+    "key": "group_59163bd17cd7f",
+    "title": "OPTIONS: PHONE NUMBERS",
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-contact-details"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "Options Panel: Contact Details",
+    "modified": 1511445162,
+    "fields": [
+        {
+            "key": "field_59163bd18cd69",
+            "label": "Phone Number(s)",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_59163bd18cd8a",
+            "label": "Primary Phone Number",
+            "name": "primary_phone_number",
+            "type": "text",
+            "instructions": "The main phone number for the business. This phone number will be used in various places throughout the site.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "eg. (123) 555-1234",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_59163bd18cddc",
+            "label": "Primary Phone Label",
+            "name": "primary_phone_label",
+            "type": "text",
+            "instructions": "The label for this number. (eg. Toll free, Call now, Local, etc.)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "eg. Toll free, Local, etc.",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_59163bd18cdff",
+            "label": "Additional Phone Numbers",
+            "name": "additional_phone_numbers",
+            "type": "repeater",
+            "instructions": "Add additional phone numbers here",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "field_58b198d196848",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Add phone number",
+            "sub_fields": [
+                {
+                    "key": "field_59163bd1976d5",
+                    "label": "Label",
+                    "name": "phone_label",
+                    "type": "text",
+                    "instructions": "eg. Fax, Toll Free, etc.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_59163bd1976ef",
+                    "label": "Number",
+                    "name": "phone_number",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
+        },
+        {
+            "key": "field_59163bd18ce5c",
+            "label": "Shortcodes",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "sub-header",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_59163bd18ceff",
+            "label": "Primary Phone Shortcode",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "You can use one of these shortcodes to display the primary phone within the wordpress content.\r\n\r\n<div class=\"shortcode-well\">[rsm_primary_phone]<\/div>\r\n<div class=\"shortcode-well\">[rsm_primary_phone style=\"button\" icon=\"true\"]<\/div>\r\n<div class=\"shortcode-well\">[rsm_primary_phone style=\"link\" icon=\"true\"]<\/div>\r\n\r\n<small><em>*DEVELOPERS NOTE: This shortcode function depends on the \"primary_phone_number\" name. Don't change that!<\/em><\/small>",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_59c53e795b2b4",
+            "label": "Additional Phones Shortcode",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "You can use one of these shortcodes to display the additional phone numbers within the wordpress content.\r\n\r\n<div class=\"shortcode-well\">[rsm_additional_phones]<\/div>\r\n\r\n<small><em>*DEVELOPERS NOTE: This shortcode function depends on the \"additional_phone_numbers\" field name. Don't change that!<\/em><\/small>",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        }
+    ]
+}

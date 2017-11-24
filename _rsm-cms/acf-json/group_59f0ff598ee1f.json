@@ -1,0 +1,442 @@
+{
+    "key": "group_59f0ff598ee1f",
+    "title": "Hero Banner",
+    "location": [
+        [
+            {
+                "param": "page_type",
+                "operator": "==",
+                "value": "front_page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "fields": [
+        {
+            "key": "field_59f10243ee70d",
+            "label": "IMAGES",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5a03a0149bbee",
+            "label": "Select Hero Style",
+            "name": "rsm_select_hero_style",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "none": "None (disabled)",
+                "hero-banner-a": "Image (1-5 slides) with Message overlay",
+                "hero-banner-b": "Parallax (1 image) with Message overlay"
+            },
+            "default_value": [
+
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        },
+        {
+            "key": "field_5a03a198bd809",
+            "label": "Make Hero Full-Height?",
+            "name": "rsm_hero_banner_full_height",
+            "type": "true_false",
+            "instructions": "This option will set the height of this element to match the height of the user's browser. If set to NO, the height will be determined by the CSS in the child theme.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a03a0149bbee",
+                        "operator": "!=",
+                        "value": "none"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5a0a849634455",
+            "label": "Use Boxed Layout?",
+            "name": "rsm_hero_banner_boxed_layout",
+            "type": "true_false",
+            "instructions": "This option will set the width of the hero to match the theme's container width (instead of full width)",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a03a0149bbee",
+                        "operator": "!=",
+                        "value": "none"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_59f0ff9f0803f",
+            "label": "Hero Banner Images",
+            "name": "rsm_hero_banner_images",
+            "type": "gallery",
+            "instructions": "Up to 5 images allowed. Ideal upload size: 1920x850, 72ppi",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "min": "",
+            "max": 5,
+            "insert": "append",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5a03a14dbd808",
+            "label": "Hero Banner Parallax Image",
+            "name": "rsm_hero_banner_parallax_image",
+            "type": "image",
+            "instructions": "Image should be at least 1900px x 1200px for best results.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a03a0149bbee",
+                        "operator": "==",
+                        "value": "hero-banner-b"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_59f10259ee70e",
+            "label": "MESSAGE",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_59f10408155c4",
+            "label": "Include Message Over Top?",
+            "name": "rsm_hero_banner_include_message",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_59f0ffe408040",
+            "label": "Hero Message",
+            "name": "rsm_hero_message",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_59f10408155c4",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_59f1001a08041",
+                    "label": "Title Prefix",
+                    "name": "title_prefix",
+                    "type": "text",
+                    "instructions": "Some small text placed above the title",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_59f1002e08042",
+                    "label": "Title",
+                    "name": "title",
+                    "type": "textarea",
+                    "instructions": "The main title text. HTML is okay.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": 2,
+                    "new_lines": ""
+                },
+                {
+                    "key": "field_59f1004508043",
+                    "label": "Subtitle",
+                    "name": "subtitle",
+                    "type": "textarea",
+                    "instructions": "A sentence below the main title. HTML is okay.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": 2,
+                    "new_lines": ""
+                },
+                {
+                    "key": "field_59f100bb08045",
+                    "label": "Button",
+                    "name": "button",
+                    "type": "group",
+                    "instructions": "Optional",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_59f100d408046",
+                            "label": "Label",
+                            "name": "label",
+                            "type": "text",
+                            "instructions": "The button text",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_59f100df08047",
+                            "label": "URL",
+                            "name": "url",
+                            "type": "link",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array"
+                        },
+                        {
+                            "key": "field_59f1010308048",
+                            "label": "Base Style",
+                            "name": "base_style",
+                            "type": "radio",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "btn-default": "Default",
+                                "btn-primary": "Primary",
+                                "btn-secondary": "Secondary",
+                                "btn-accent": "Accent"
+                            },
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "save_other_choice": 0,
+                            "default_value": "btn-primary",
+                            "layout": "horizontal",
+                            "return_format": "value"
+                        },
+                        {
+                            "key": "field_59f1014808049",
+                            "label": "Modifier Style",
+                            "name": "modifier_style",
+                            "type": "radio",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "none": "None",
+                                "btn-reverse": "Reverse",
+                                "btn-outline": "Outline",
+                                "btn-hover-icon": "Hover Icon"
+                            },
+                            "allow_null": 1,
+                            "other_choice": 0,
+                            "save_other_choice": 0,
+                            "default_value": "none",
+                            "layout": "horizontal",
+                            "return_format": "value"
+                        },
+                        {
+                            "key": "field_59f101890804a",
+                            "label": "Size",
+                            "name": "size",
+                            "type": "radio",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "default": "Default",
+                                "btn-large": "Large"
+                            },
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "save_other_choice": 0,
+                            "default_value": "default",
+                            "layout": "horizontal",
+                            "return_format": "value"
+                        },
+                        {
+                            "key": "field_59f1100a3ac8a",
+                            "label": "Hover Icon HTML",
+                            "name": "hover_icon_html",
+                            "type": "text",
+                            "instructions": "Ex: &lt;i class=\"fa fa-angle-right\"&gt;&lt;\/i&gt;",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "modified": 1511445161
+}

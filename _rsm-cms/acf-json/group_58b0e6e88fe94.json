@@ -1,0 +1,201 @@
+{
+    "key": "group_58b0e6e88fe94",
+    "title": "OPTIONS: SOCIAL NETWORKS",
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-social-networks-and-tracking-codes"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "Options Panel: Social Networks",
+    "modified": 1511445162,
+    "fields": [
+        {
+            "key": "field_58b0e821406ec",
+            "label": "Social Channels",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_58b0e83b406ed",
+            "label": "Facebook",
+            "name": "facebook",
+            "type": "url",
+            "instructions": "Enter the full URL for your profile",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "http:\/\/..."
+        },
+        {
+            "key": "field_58b0eea973506",
+            "label": "Instagram",
+            "name": "instagram",
+            "type": "url",
+            "instructions": "Enter the full URL for your profile",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "http:\/\/..."
+        },
+        {
+            "key": "field_58b0eec473507",
+            "label": "Linked IN",
+            "name": "linkedin",
+            "type": "url",
+            "instructions": "Enter the full URL for your profile",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "http:\/\/..."
+        },
+        {
+            "key": "field_58b0eed573508",
+            "label": "Pinterest",
+            "name": "pinterest",
+            "type": "url",
+            "instructions": "Enter the full URL for your profile",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "http:\/\/..."
+        },
+        {
+            "key": "field_58b0eee073509",
+            "label": "Twitter",
+            "name": "twitter",
+            "type": "url",
+            "instructions": "Enter the full URL for your profile",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "http:\/\/..."
+        },
+        {
+            "key": "field_58b0eef57350a",
+            "label": "Yelp",
+            "name": "yelp",
+            "type": "url",
+            "instructions": "Enter the full URL for your profile",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "http:\/\/..."
+        },
+        {
+            "key": "field_58b0ef097350b",
+            "label": "Google +",
+            "name": "google_plus",
+            "type": "url",
+            "instructions": "Enter the full URL for your profile",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "http:\/\/..."
+        },
+        {
+            "key": "field_58b0ef177350c",
+            "label": "YouTube",
+            "name": "youtube",
+            "type": "url",
+            "instructions": "Enter the full URL for your profile",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "http:\/\/..."
+        },
+        {
+            "key": "field_tracking_1",
+            "label": "Shortcodes",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_59c545b8f964c",
+            "label": "Social Channels Shortcode",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "You can use this shortcode to display the list of social networks within the wordpress content.\r\n\r\n<div class=\"shortcode-well\">[rsm_social_networks]<\/div>\r\n\r\n<small><em>*DEVELOPERS NOTE: This shortcode function depends on various fields. Don't change them!<\/em><\/small>",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        }
+    ]
+}

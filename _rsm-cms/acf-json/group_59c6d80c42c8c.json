@@ -1,0 +1,98 @@
+{
+    "key": "group_59c6d80c42c8c",
+    "title": "OPTIONS: 404 Page",
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-404-page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1511445161,
+    "fields": [
+        {
+            "key": "field_59c6d82a6a2bf",
+            "label": "Page title",
+            "name": "rsm_404_page_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_59c6d86f6a2c1",
+            "label": "Content below title",
+            "name": "rsm_404_content_below_title",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_59c6d8496a2c0",
+            "label": "Include Search bar?",
+            "name": "rsm_404_include_search_bar",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_59c6d8b56a2c2",
+            "label": "Widget Area",
+            "name": "",
+            "type": "message",
+            "instructions": "***",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Create a widget area for 404 page and include a link to it here.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        }
+    ]
+}

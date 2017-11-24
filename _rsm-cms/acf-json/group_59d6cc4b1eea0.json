@@ -1,0 +1,60 @@
+{
+    "key": "group_59d6cc4b1eea0",
+    "title": "WIDGET: Social Channels",
+    "location": [
+        [
+            {
+                "param": "widget",
+                "operator": "==",
+                "value": "rsm_socialchannels_widget"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1511445164,
+    "fields": [
+        {
+            "key": "field_59d6cc4b243f9",
+            "label": "NOTE",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "<b><i>The address is set in the Social Networks section of the Options panel.<\/i><\/b>",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_59d6cc4b24413",
+            "label": "Add Custom Class",
+            "name": "rsm_widget_social_channels_custom_class",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ]
+}

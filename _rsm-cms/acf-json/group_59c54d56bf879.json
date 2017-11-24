@@ -1,0 +1,180 @@
+{
+    "key": "group_59c54d56bf879",
+    "title": "OPTIONS: AWARDS & RECOGNITION",
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-business-info"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "Options page: Business Info",
+    "modified": 1511445161,
+    "fields": [
+        {
+            "key": "field_59c55d1c1ea31",
+            "label": "Options",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_59c54d5f59552",
+            "label": "Awards \/ Recognition",
+            "name": "rsm_recognition",
+            "type": "repeater",
+            "instructions": "Use this module to list any awards\/recognition you've received. Upload an image and link to an awards page, if desired.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "",
+            "sub_fields": [
+                {
+                    "key": "field_59c54da559553",
+                    "label": "Badge \/ Image",
+                    "name": "image",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "id",
+                    "preview_size": "thumbnail",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_59c54dbe59554",
+                    "label": "URL",
+                    "name": "link",
+                    "type": "url",
+                    "instructions": "OPTIONAL",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
+                }
+            ]
+        },
+        {
+            "key": "field_59c54e0ee91dc",
+            "label": "Make images greyscale?",
+            "name": "rsm_recognition_greyscale",
+            "type": "true_false",
+            "instructions": "Switch this on if you have coloured logos and you want to have them as a neutral grey instead. *Only applicable when using colour images.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_59c54e63e91dd",
+            "label": "Show colour on hover?",
+            "name": "rsm_recognition_colour_on_hover",
+            "type": "true_false",
+            "instructions": "Transition the image to full colour if someone hovers over it",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_59c54e0ee91dc",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_59c55d321ea32",
+            "label": "Shortcodes",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_59c55d441ea33",
+            "label": "Awards Shortcode",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "You can use this shortcode to display this content within wordpress.\r\n\r\n<div class=\"shortcode-well\">[rsm_awards_recognition]<\/div>\r\n\r\n<small><em>*DEVELOPERS NOTE: This shortcode function depends on the pre-defined field name(s). Don't change them!<\/em><\/small>",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        }
+    ]
+}

@@ -1,0 +1,140 @@
+{
+    "key": "group_59ecdf40e2fc2",
+    "title": "RSM - TESTIMONIAL: Details",
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "rsm_testimonial"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1511445164,
+    "fields": [
+        {
+            "key": "field_59ece0e879ee2",
+            "label": "Name byline",
+            "name": "rsm_testimonial_name_byline",
+            "type": "text",
+            "instructions": "Use this field to add a location or business name to the testimonial name. ex. John Smith, <b>Vancouver, BC<\/b>",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_59ecdf6179ede",
+            "label": "Summary",
+            "name": "rsm_testimonial_summary",
+            "type": "textarea",
+            "instructions": "Maximum 144 characters. HTML is okay.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": 144,
+            "rows": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_59ecdf9479edf",
+            "label": "Full Testimonial",
+            "name": "rsm_testimonial_full",
+            "type": "textarea",
+            "instructions": "The full testimonial. Use this are if the testimonial is really long and you want to put the fun version on the site.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_59ecdfd879ee0",
+            "label": "Source",
+            "name": "rsm_testimonial_source",
+            "type": "select",
+            "instructions": "If applicable, set where this testimonial was left",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "none": "None",
+                "houzz": "Houzz",
+                "yelp": "Yelp",
+                "homestars": "HomeStars",
+                "google": "Google",
+                "facebook": "Facebook",
+                "twitter": "Twitter"
+            },
+            "default_value": [
+
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        },
+        {
+            "key": "field_59ece08879ee1",
+            "label": "Star rating",
+            "name": "rsm_testimonial_star_rating",
+            "type": "radio",
+            "instructions": "Some services allow users to leave a star rating. You can display that here as well if applicable.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "1": "1",
+                "2": "2",
+                "3": "3",
+                "4": "4",
+                "5": "5"
+            },
+            "allow_null": 1,
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "",
+            "layout": "horizontal",
+            "return_format": "value"
+        }
+    ]
+}

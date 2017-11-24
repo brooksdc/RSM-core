@@ -1,0 +1,169 @@
+{
+    "key": "group_59c0af7511675",
+    "title": "OPTIONS: FOOTER",
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-theme-settings"
+            }
+        ]
+    ],
+    "menu_order": 10,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "OPTIONS Panel: Theme Settings",
+    "modified": 1511445165,
+    "fields": [
+        {
+            "key": "field_59d6f6fc1c16f",
+            "label": "Options",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_59c546791691a",
+            "label": "Credit \/ Copyright Line",
+            "name": "rsm_site_credit",
+            "type": "textarea",
+            "instructions": "Use the <b><i>%the_year%<\/i><\/b> tag to display the current year in your credit line.<br>\r\nUse the <b><i>%site_name%<\/i><\/b> tag to display this site's name.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "&copy; %the_year% Copyright. All Rights Reserved. <a href=\"#\" class=\"rsm-link\">Trades Marketing Websites Canada<\/a>",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 4,
+            "new_lines": ""
+        },
+        {
+            "key": "field_59fe31d106544",
+            "label": "LAYOUT",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_59fe317299c72",
+            "label": "Choose Footer Layout",
+            "name": "rsm_footer_layout_select",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "footer-layout-1": "Footer Layout 1",
+                "footer-layout-2": "Footer Layout 2"
+            },
+            "default_value": [
+                "footer-layout-1"
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        },
+        {
+            "key": "field_59fe321906545",
+            "label": "Layout Reference",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "<span class=\"rsm-layout-ref\">Layout 1:<span class=\"footer-layout-1-thumb\"><\/span><\/span>\r\n<span class=\"rsm-layout-ref\">Layout 2:<span class=\"footer-layout-2-thumb\"><\/span><\/span>",
+            "new_lines": "",
+            "esc_html": 0
+        },
+        {
+            "key": "field_59fe324e57637",
+            "label": "Drop-in Widgets",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Each footer layout has different number of \"drop-in\" areas available for customization. (Appearance > Widgets)\r\n\r\n<i>Quick Reference:<\/i><br>\r\n<b>Footer Layout 1:<\/b> 1, 2<br>\r\n<b>Footer Layout 2:<\/b> 1<br>",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_59d6f48540b90",
+            "label": "USAGE",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_59d6f4a67df08",
+            "label": "Site Credit Shortcode",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Add the site credit to your theme template using this shortcode:\r\n\r\n<div class=\"shortcode-well\">[rsm_site_credit]<\/div>\r\n\r\n<small><em>*DEVELOPERS NOTE: This shortcode function depends on field names set in the Options tab. Don't change them unless you know what you're doing!<\/em><br><br>If You want to override the markup of this template, you can copy the file from \/plugins\/_rsm_core\/templates\/rsm-header-logo.php, create a new folder named <b>rsm-templates<\/b> in <b>your theme<\/b>, and paste the file in there (using the same filename).<\/small>",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        }
+    ]
+}

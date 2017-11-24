@@ -1,0 +1,62 @@
+{
+    "key": "group_59c0b0326a3e5",
+    "title": "OPTIONS: CODE",
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-theme-settings"
+            }
+        ]
+    ],
+    "menu_order": 20,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 0,
+    "description": "OPTIONS Panel: Theme Settings",
+    "modified": 1511445166,
+    "fields": [
+        {
+            "key": "field_59c0b037ceac2",
+            "label": "Header Code",
+            "name": "header_code",
+            "type": "textarea",
+            "instructions": "Paste any code here that you would like to add to EVERY template before the closing &lt;\/head&gt; tag",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_59c0b13d39669",
+            "label": "Footer Code",
+            "name": "footer_code",
+            "type": "textarea",
+            "instructions": "Paste any code here that you would like to add to EVERY template before the closing &lt;\/body&gt; tag",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        }
+    ]
+}

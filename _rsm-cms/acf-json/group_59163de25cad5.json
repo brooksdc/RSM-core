@@ -1,0 +1,203 @@
+{
+    "key": "group_59163de25cad5",
+    "title": "OPTIONS: EMAIL ADDRESSES",
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-contact-details"
+            }
+        ]
+    ],
+    "menu_order": 10,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "Options Panel: Contact Details",
+    "modified": 1511445165,
+    "fields": [
+        {
+            "key": "field_59163de269287",
+            "label": "Email Address(es)",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_59163de269299",
+            "label": "Email address note",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "<span style=\"color: red\">*All email addresses will be obfuscated in the code to avoid scraping by internet bots.<\/span>",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_59163de2692aa",
+            "label": "Primary Email Address",
+            "name": "primary_email_address",
+            "type": "email",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "you@email.com",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_59163de2692bc",
+            "label": "Primary Email Label",
+            "name": "primary_email_label",
+            "type": "text",
+            "instructions": "The label for this email. (eg. Admin, Support, etc.)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_59163de2692cd",
+            "label": "Additional Email Addresses",
+            "name": "additional_email_addresses",
+            "type": "repeater",
+            "instructions": "Add additional public email addresses for your business here.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Add email",
+            "sub_fields": [
+                {
+                    "key": "field_59163de28e025",
+                    "label": "Label",
+                    "name": "email_label",
+                    "type": "text",
+                    "instructions": "eg. Office, Admin, etc.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_59163de28e048",
+                    "label": "Email Address",
+                    "name": "email_address",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
+        },
+        {
+            "key": "field_59163e31067fa",
+            "label": "Shortcodes",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_59c53fc65b3c0",
+            "label": "Primary Email Address Shortcode",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "You can use one of these shortcodes to display the primary email address within the wordpress content.\r\n\r\n<div class=\"shortcode-well\">[rsm_primary_email]<\/div>\r\n<div class=\"shortcode-well\">[rsm_primary_email style=\"button\" icon=\"true\"]<\/div>\r\n<div class=\"shortcode-well\">[rsm_primary_email style=\"link\" icon=\"true\"]<\/div>\r\n\r\n<small><em>*DEVELOPERS NOTE: This shortcode function depends on the \"primary_email_address\" name. Don't change that!<\/em><\/small>",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_59c540015b3c1",
+            "label": "Secondary Email Addresses Shortcode",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "You can use one of these shortcodes to display the additional email addresses within the wordpress content.\r\n\r\n<div class=\"shortcode-well\">[rsm_additional_email]<\/div>\r\n\r\n<small><em>*DEVELOPERS NOTE: This shortcode function depends on the \"additional_email_addresses\" name. Don't change that!<\/em><\/small>",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        }
+    ]
+}

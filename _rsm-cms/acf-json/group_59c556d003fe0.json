@@ -1,0 +1,41 @@
+{
+    "key": "group_59c556d003fe0",
+    "title": "OPTIONS: FAVICON & Touch Icons",
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-theme-settings"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "OPTIONS Panel: Theme Settings",
+    "modified": 1511445161,
+    "fields": [
+        {
+            "key": "field_59c556d5a2d45",
+            "label": "Favicon Generator",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "To save lots of time and effort, install this convenient favicon generator: <a href=\"https:\/\/en-ca.wordpress.org\/plugins\/favicon-by-realfavicongenerator\/\" target=\"_blank\">Favicon by RealFaviconGenerator<\/a>\r\n\r\nOnce installed, go to <b>Appearance > Favicon<\/b> to configure",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        }
+    ]
+}

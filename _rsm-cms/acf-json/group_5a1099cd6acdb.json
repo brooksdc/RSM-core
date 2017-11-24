@@ -1,0 +1,573 @@
+{
+    "key": "group_5a1099cd6acdb",
+    "title": "Page Settings",
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "rsm_team_member"
+            }
+        ]
+    ],
+    "menu_order": 10,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "fields": [
+        {
+            "key": "field_5a1099cd72bac",
+            "label": "Masthead",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5a1099cd72bc5",
+            "label": "Customize masthead for this page?",
+            "name": "rsm_page_use_fullwidth_masthead",
+            "type": "true_false",
+            "instructions": "NOTE: there is a global setting for this masthead display in <b>options > theme settings<\/b>. This page will use the masthead automatically if that option is set.<br><br>\r\n\r\n<b>Switch this on to either customize the appearance for this page, or activate for this page (if not enabled globally from the options panel.)<\/b>",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5a10a0a546525",
+            "label": "Place page title in masthead area?",
+            "name": "rsm_page_place_page_title_in_masthead",
+            "type": "true_false",
+            "instructions": "If YES, the page title will be moved from the content area to the masthead area.<br>\r\nDefault: YES",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a1099cd72bc5",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5a10a7a087e8a",
+            "label": "Add custom masthead title",
+            "name": "rsm_page_custom_masthead_title",
+            "type": "textarea",
+            "instructions": "OPTIONAL. HTML is allowed",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a10a0a546525",
+                        "operator": "!=",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_5a1099cd72bc5",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 2,
+            "new_lines": ""
+        },
+        {
+            "key": "field_5a1099cd72c7e",
+            "label": "Content above title in masthead",
+            "name": "rsm_page_masthead_surtitle",
+            "type": "textarea",
+            "instructions": "OPTIONAL. HTML is allowed",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a1099cd72bc5",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 3,
+            "new_lines": ""
+        },
+        {
+            "key": "field_5a1099cd72c93",
+            "label": "Content below title in masthead",
+            "name": "rsm_page_masthead_subtitle",
+            "type": "textarea",
+            "instructions": "OPTIONAL. HTML is allowed",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a1099cd72bc5",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 3,
+            "new_lines": ""
+        },
+        {
+            "key": "field_5a109cdd9f7b9",
+            "label": "Override Global Title Alignment?",
+            "name": "rsm_page_override_global_title_align",
+            "type": "true_false",
+            "instructions": "Default is NO",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a1099cd72bc5",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5a1099cd72c6a",
+            "label": "Masthead Title alignment",
+            "name": "rsm_page_masthead_title_alignment",
+            "type": "group",
+            "instructions": "NOTE: This will override the global masthead title alignment (if set in options > theme settings > masthead.)",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a109cdd9f7b9",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_5a1099cd72bc5",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_5a109e2e506a9",
+                    "label": "Vertical",
+                    "name": "vertical_align",
+                    "type": "radio",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "v-top": "Top",
+                        "v-middle": "Middle",
+                        "v-bottom": "Bottom"
+                    },
+                    "allow_null": 0,
+                    "other_choice": 0,
+                    "save_other_choice": 0,
+                    "default_value": "",
+                    "layout": "horizontal",
+                    "return_format": "value"
+                },
+                {
+                    "key": "field_5a109e5a506aa",
+                    "label": "Horizontal",
+                    "name": "horizontal_align",
+                    "type": "radio",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "text-left": "Left",
+                        "text-center": "Center",
+                        "text-right": "Right"
+                    },
+                    "allow_null": 0,
+                    "other_choice": 0,
+                    "save_other_choice": 0,
+                    "default_value": "",
+                    "layout": "horizontal",
+                    "return_format": "value"
+                }
+            ]
+        },
+        {
+            "key": "field_5a1099cd72ca7",
+            "label": "Masthead Image",
+            "name": "rsm_page_masthead_image",
+            "type": "image",
+            "instructions": "If this is not set, the \"featured image\" of this page will be used.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a1099cd72bc5",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5a1099cd72cbc",
+            "label": "Don't use image",
+            "name": "rsm_page_no_masthead_image",
+            "type": "true_false",
+            "instructions": "Don't use image at all. This will fallback to the setting a color in the theme's CSS.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a1099cd72bc5",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "No image",
+            "ui_off_text": "Use image"
+        },
+        {
+            "key": "field_5a135c1495e38",
+            "label": "Customize overlay?",
+            "name": "rsm_page_custom_masthead_overlay",
+            "type": "true_false",
+            "instructions": "Customize the image overlay settings for this page",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a1099cd72bc5",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5a135c4c95e39",
+            "label": "Overlay settings",
+            "name": "rsm_page_custom_masthead_overlay_settings",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a1099cd72bc5",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_5a135c1495e38",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_5a135c6395e3a",
+                    "label": "Colour",
+                    "name": "colour",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "#000"
+                },
+                {
+                    "key": "field_5a135c7495e3b",
+                    "label": "Opacity",
+                    "name": "opacity",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "min": 0,
+                    "max": 100,
+                    "step": ""
+                }
+            ]
+        },
+        {
+            "key": "field_5a1099cd72cd0",
+            "label": "DISABLE masthead for this page",
+            "name": "rsm_page_disable_masthead",
+            "type": "true_false",
+            "instructions": "Switch this on to completely disable the masthead element for this page. This will override the global setting set in <b>Options > Theme Settings<\/b>.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5a10a66287e89",
+            "label": "Page Title",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5a1099cd72c18",
+            "label": "Custom Page Title",
+            "name": "rsm_page_custom_title",
+            "type": "textarea",
+            "instructions": "You may want to use a more compelling title in some situations, instead of &quot;About Us&quot; or &quot;Contact&quot; (This won&rsquo;t replace the &lt;H1&gt; of the page &mdash; that will still be the page title for SEO purposes).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 2,
+            "new_lines": "wpautop"
+        },
+        {
+            "key": "field_5a1099cd72c55",
+            "label": "NO page title",
+            "name": "rsm_page_hide_page_title",
+            "type": "true_false",
+            "instructions": "Don't display the page title at all. (It will still be visible to screen-readers for accessibility purposes.)",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a1099cd72bc5",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5a1099cd72ce5",
+            "label": "General",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5a1099cd72d05",
+            "label": "Custom Page Class",
+            "name": "custom_page_class",
+            "type": "text",
+            "instructions": "Add a custom class to the &lt;body&gt; tag",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5a1099cd72d18",
+            "label": "Add No Index, No Follow meta tag?",
+            "name": "custom_robots",
+            "type": "true_false",
+            "instructions": "Check this if you want search engines to AVOID indexing this page.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        }
+    ],
+    "modified": 1511445165
+}

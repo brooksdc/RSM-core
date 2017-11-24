@@ -1,0 +1,70 @@
+{
+    "key": "group_59af14cc491fb",
+    "title": "OPTIONS: MAINTENANCE MODE",
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-maintenance-page"
+            }
+        ]
+    ],
+    "menu_order": 100,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "OPTIONS Panel: Theme Settings",
+    "modified": 1511445166,
+    "fields": [
+        {
+            "key": "field_59af14dc84689",
+            "label": "Activate Maintenance Mode",
+            "name": "maintenance_mode",
+            "type": "true_false",
+            "instructions": "If checked, the themes 503.php file will be used for any user who isn't logged in.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "On",
+            "ui_off_text": "Off"
+        },
+        {
+            "key": "field_59c6d535f3739",
+            "label": "Content for maintenance page",
+            "name": "maintenance_page_content",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_59af14dc84689",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        }
+    ]
+}

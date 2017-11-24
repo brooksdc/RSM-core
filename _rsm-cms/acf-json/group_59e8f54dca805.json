@@ -1,0 +1,114 @@
+{
+    "key": "group_59e8f54dca805",
+    "title": "WIDGET: Contact Card",
+    "location": [
+        [
+            {
+                "param": "widget",
+                "operator": "==",
+                "value": "rsm_contactcard_widget"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1511445164,
+    "fields": [
+        {
+            "key": "field_59e8f5597fa97",
+            "label": "Logo \/ Icon",
+            "name": "rsm_widget_contact_card_logo",
+            "type": "image",
+            "instructions": "This will be placed at the top of the card.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_59e8f5b17fa98",
+            "label": "Include Contact Details",
+            "name": "rsm_widget_contact_card_includes",
+            "type": "checkbox",
+            "instructions": "Check which options you would like to display in the contact card.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "phone": "Phone Number",
+                "address": "Business Address",
+                "hours": "Business Hours",
+                "email": "Email Address"
+            },
+            "allow_custom": 0,
+            "save_custom": 0,
+            "default_value": [
+
+            ],
+            "layout": "vertical",
+            "toggle": 1,
+            "return_format": "value"
+        },
+        {
+            "key": "field_59e8f63d7fa99",
+            "label": "Arbitrary Content",
+            "name": "rsm_widget_contact_card_arbitrary_content",
+            "type": "textarea",
+            "instructions": "HTML is allowed.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_59e8f67b7fa9a",
+            "label": "Custom Class",
+            "name": "rsm_widget_contact_card_custom_class",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ]
+}

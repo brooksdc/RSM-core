@@ -1,0 +1,242 @@
+{
+    "key": "group_59dffb771dc28",
+    "title": "OPTIONS: GLOBAL PAGE MASTHEAD",
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-theme-settings"
+            }
+        ]
+    ],
+    "menu_order": 3,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "OPTIONS Panel: Theme Settings",
+    "fields": [
+        {
+            "key": "field_59dffb9d8b92a",
+            "label": "Options",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_59dffbb28b92b",
+            "label": "Use masthead for all pages?",
+            "name": "rsm_global_use_masthead_for_all_pages",
+            "type": "true_false",
+            "instructions": "If set, the masthead feature will be turned on for ALL pages. The options can be customized per page, as well as turned off completely to override this setting.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5a0ba93abe931",
+            "label": "Use page title in masthead area?",
+            "name": "rsm_global_masthead_use_page_title",
+            "type": "true_false",
+            "instructions": "If YES, the page title will be moved from the content area to the masthead block. This includes the &lt; H1 &gt; HTML markup. Default: YES.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_59dffbb28b92b",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5a109a11907a4",
+            "label": "Include breadcrumbs in masthead area?",
+            "name": "rsm_global_masthead_use_breadcrumbs",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_59dffbb28b92b",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_59dffca279755",
+            "label": "Masthead Title alignment",
+            "name": "rsm_global_masthead_title_alignment",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_59dffbb28b92b",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_59dffce279756",
+                    "label": "Vertical",
+                    "name": "vertical_align",
+                    "type": "radio",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "v-top": "Top",
+                        "v-middle": "Middle",
+                        "v-bottom": "Bottom"
+                    },
+                    "allow_null": 0,
+                    "other_choice": 0,
+                    "save_other_choice": 0,
+                    "default_value": "",
+                    "layout": "horizontal",
+                    "return_format": "value"
+                },
+                {
+                    "key": "field_59dffd1979757",
+                    "label": "Horizontal",
+                    "name": "horizontal_align",
+                    "type": "radio",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "text-left": "Left",
+                        "text-center": "Center",
+                        "text-right": "Right"
+                    },
+                    "allow_null": 0,
+                    "other_choice": 0,
+                    "save_other_choice": 0,
+                    "default_value": "",
+                    "layout": "horizontal",
+                    "return_format": "value"
+                }
+            ]
+        },
+        {
+            "key": "field_5a038caadb7fe",
+            "label": "Use Parallax Effect?",
+            "name": "rsm_global_masthead_use_parallax_effect",
+            "type": "true_false",
+            "instructions": "This can have a negative impact on performance due to the resources it takes to render. If scrolling appears to be choppy, turn this option off.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_59dffbb28b92b",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5a0ba7384f409",
+            "label": "Use Boxed Layout?",
+            "name": "rsm_global_masthead_use_boxed_layout",
+            "type": "true_false",
+            "instructions": "If YES, the width of the masthead will match the site's container width, not bleed to full width.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_59dffbb28b92b",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        }
+    ],
+    "modified": 1511445164
+}

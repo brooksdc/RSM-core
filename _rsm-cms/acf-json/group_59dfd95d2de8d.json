@@ -1,0 +1,434 @@
+{
+    "key": "group_59dfd95d2de8d",
+    "title": "Page Settings (v1)",
+    "fields": [
+        {
+            "key": "field_59dfdc39014b4",
+            "label": "Masthead",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_59dfdaf588177",
+            "label": "Setup fullwidth masthead for this page?",
+            "name": "rsm_page_use_fullwidth_masthead",
+            "type": "true_false",
+            "instructions": "NOTE: there is a global setting for this masthead display in options > theme settings.\r\n\r\nIf this is turned on here, the H1 tag of this page will be moved to the masthead section and you can customize the individual settings for this page.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_59dfd95d362e0",
+            "label": "Use this page's title for the masthead title?",
+            "name": "rsm_page_use_default_page_title",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_59dfdaf588177",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_59dfd95d36336",
+            "label": "Custom Masthead Title",
+            "name": "rsm_page_custom_masthead_title",
+            "type": "textarea",
+            "instructions": "You may want to use a more compelling title in some situations, instead of &quot;About Us&quot; or &quot;Contact&quot; (This won&rsquo;t replace the &lt;H1&gt; of the page &mdash; that will still be the page title for SEO purposes).",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_59dfd95d362e0",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 2,
+            "new_lines": "wpautop"
+        },
+        {
+            "key": "field_59dfded178404",
+            "label": "Use H1 tag for masthead title",
+            "name": "rsm_page_h1_tag_masthead_title",
+            "type": "true_false",
+            "instructions": "Default is YES",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_59dfdaf588177",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "H1",
+            "ui_off_text": "Div"
+        },
+        {
+            "key": "field_59dfdf9278405",
+            "label": "ATTENTION",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_59dfded178404",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "You've chosen not to use the <b>H1<\/b> tag for this masthead title. This page's default title will be used as the H1 instead to ensure there is one readable by search engines. This default title will be accessible for screen-readers, but not visible to website users.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_59dfd95d36357",
+            "label": "Hide masthead title",
+            "name": "rsm_page_hide_masthead_title",
+            "type": "true_false",
+            "instructions": "Don't display the masthead title at all. (It will still be visible to screen-readers for accessibility purposes.)",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_59dfdaf588177",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_59e17866faad2",
+            "label": "Masthead Title alignment",
+            "name": "rsm_page_masthead_title_alignment",
+            "type": "group",
+            "instructions": "NOTE: This will override the global masthead title alignment (if set in options > theme settings > masthead.)",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_59dfdaf588177",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_59e17866faad3",
+                    "label": "Vertical",
+                    "name": "vertical_align",
+                    "type": "radio",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "v-top": "Top",
+                        "v-middle": "Middle",
+                        "v-bottom": "Bottom"
+                    },
+                    "allow_null": 0,
+                    "other_choice": 0,
+                    "save_other_choice": 0,
+                    "default_value": "",
+                    "layout": "horizontal",
+                    "return_format": "value"
+                },
+                {
+                    "key": "field_59e17866faad4",
+                    "label": "Horizontal",
+                    "name": "horizontal_align",
+                    "type": "radio",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "text-left": "Left",
+                        "text-center": "Center",
+                        "text-right": "Right"
+                    },
+                    "allow_null": 0,
+                    "other_choice": 0,
+                    "save_other_choice": 0,
+                    "default_value": "",
+                    "layout": "horizontal",
+                    "return_format": "value"
+                }
+            ]
+        },
+        {
+            "key": "field_59e23f7f43421",
+            "label": "Content above masthead title",
+            "name": "rsm_page_masthead_surtitle",
+            "type": "textarea",
+            "instructions": "HTML is allowed",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_59dfdaf588177",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 3,
+            "new_lines": ""
+        },
+        {
+            "key": "field_59e23fa343422",
+            "label": "Content below masthead title",
+            "name": "rsm_page_masthead_subtitle",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_59dfdaf588177",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 3,
+            "new_lines": ""
+        },
+        {
+            "key": "field_59e2404662d54",
+            "label": "Masthead Image",
+            "name": "rsm_page_masthead_image",
+            "type": "image",
+            "instructions": "If this is not set, the \"featured image\" of this page will be used.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_59dfdaf588177",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_59e24bf94c621",
+            "label": "Don't use image",
+            "name": "ram_page_no_masthead_image",
+            "type": "true_false",
+            "instructions": "Don't use image at all. This will fallback to the setting a color in the theme's CSS.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_59dfdaf588177",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "No image",
+            "ui_off_text": "Use image"
+        },
+        {
+            "key": "field_59dfd97f6105b",
+            "label": "General",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_59dfdbf2014b2",
+            "label": "Custom Page Class",
+            "name": "custom_page_class",
+            "type": "text",
+            "instructions": "Add a custom class to the &lt;body&gt; tag",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_59dfdc08014b3",
+            "label": "Add No Index, No Follow meta tag?",
+            "name": "custom_robots",
+            "type": "true_false",
+            "instructions": "Check this if you want search engines to AVOID indexing this page.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 0,
+    "description": "",
+    "modified": 1511445323
+}

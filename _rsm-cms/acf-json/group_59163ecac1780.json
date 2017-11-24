@@ -1,0 +1,132 @@
+{
+    "key": "group_59163ecac1780",
+    "title": "OPTIONS: BUSINESS HOURS",
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-business-info"
+            }
+        ]
+    ],
+    "menu_order": 20,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "Options page: Business Info",
+    "modified": 1511445166,
+    "fields": [
+        {
+            "key": "field_59163ecace823",
+            "label": "Business Hours",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_59163ecace85b",
+            "label": "Add Business Hours",
+            "name": "business_hours",
+            "type": "repeater",
+            "instructions": "Add business hours here",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "",
+            "sub_fields": [
+                {
+                    "key": "field_59163ecb128a7",
+                    "label": "Label",
+                    "name": "hours_label",
+                    "type": "text",
+                    "instructions": "The day or group of days. (eg. Monday, Tuesday through Thursday, etc.)",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_59163ecb128c0",
+                    "label": "Hours",
+                    "name": "hours_time",
+                    "type": "text",
+                    "instructions": "Open hours for this period. (eg. 9am - 5pm, etc.)",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
+        },
+        {
+            "key": "field_59163f1fb32b7",
+            "label": "Shortcode",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_59163ecace8f2",
+            "label": "Business Hours Shortcode",
+            "name": "",
+            "type": "message",
+            "instructions": "This title will be displayed above the business hours. *Depends on the theme template files and structure if this is used.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "You can use this shortcode to display this content within wordpress.\r\n\r\n<div class=\"shortcode-well\">[rsm_business_hours]<\/div>\r\n\r\n<small><em>*DEVELOPERS NOTE: This shortcode function depends on the pre-defined field name(s). Don't change them!<\/em><\/small>",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        }
+    ]
+}

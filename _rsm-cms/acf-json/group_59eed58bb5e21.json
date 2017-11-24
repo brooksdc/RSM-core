@@ -1,0 +1,72 @@
+{
+    "key": "group_59eed58bb5e21",
+    "title": "WIDGET: Local Directory Menu",
+    "location": [
+        [
+            {
+                "param": "widget",
+                "operator": "==",
+                "value": "rsm_localdirectorymenu_widget"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1511445164,
+    "fields": [
+        {
+            "key": "field_59eed58bbb15e",
+            "label": "Exclude IDs",
+            "name": "rsm_widget_local_directory_menu_exclude_ids",
+            "type": "post_object",
+            "instructions": "Comma-separated list of page IDs to exclude from the menu query.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+
+            ],
+            "taxonomy": [
+
+            ],
+            "allow_null": 0,
+            "multiple": 1,
+            "return_format": "id",
+            "ui": 1
+        },
+        {
+            "key": "field_59eed5d3d69c2",
+            "label": "Page Depth",
+            "name": "rsm_widget_local_directory_menu_depth",
+            "type": "radio",
+            "instructions": "Number of page levels this menu can go down.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "1": "1",
+                "2": "2"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "",
+            "layout": "horizontal",
+            "return_format": "value"
+        }
+    ]
+}

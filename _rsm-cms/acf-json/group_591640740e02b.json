@@ -1,0 +1,415 @@
+{
+    "key": "group_591640740e02b",
+    "title": "OPTIONS: ADDRESS & Schema Data",
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-contact-details"
+            }
+        ]
+    ],
+    "menu_order": 30,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "Options Panel: Contact Details",
+    "modified": 1511445166,
+    "fields": [
+        {
+            "key": "field_591640741a812",
+            "label": "Address Setup",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_591640741a826",
+            "label": "Structured Address Data",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "The address data below will be used to build two things:\r\n1) simple address data that can be displayed via shortcode or widget;\r\n2) structured schema data to inform search engines about your business. (ref: http:\/\/schema-creator.org\/organization.php)",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_591640741a84f",
+            "label": "Street Address",
+            "name": "address_street",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "eg. 555-123 Main St.",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_591640741a863",
+            "label": "City",
+            "name": "address_city",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "eg. Vancouver",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_591640741a878",
+            "label": "Province\/State",
+            "name": "address_region",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "eg. British Columbia",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_591640741a88c",
+            "label": "Country",
+            "name": "address_country",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "eg. Canada",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_591640741a8a1",
+            "label": "Postal Code",
+            "name": "address_postal",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "eg. V1V 1V1",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_591640741a8b6",
+            "label": "Map \/ Directions Link",
+            "name": "map_link",
+            "type": "text",
+            "instructions": "OPTIONAL. Paste a site link or URL here to redirect users to a map.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "http:\/\/...",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_59e65dabdd8ac",
+            "label": "Schema structures",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_591640741a83b",
+            "label": "Organization Type",
+            "name": "schema_organization_type",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Organization": "General",
+                "Corporation": "Corporation",
+                "EducationalOrganization": "School",
+                "GovernmentOrganization": "Government",
+                "LocalBusiness": "Local Business",
+                "NGO": "NGO",
+                "PerformingGroup": "Performing Group",
+                "SportsTeam": "Sports Team"
+            },
+            "default_value": [
+                "Organization"
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        },
+        {
+            "key": "field_59e65e7ddd8ad",
+            "label": "Organization Type (Child Category)",
+            "name": "schema_organization_type_child",
+            "type": "text",
+            "instructions": "OPTIONAL. There are child categories within each parent category. Check out <a href=\"https:\/\/www.schemaapp.com\/tools\/jsonld-schema-generator\/\" target=\"_blank\">this tool<\/a> to see what's available.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_59e65ef6dd8ae",
+            "label": "email",
+            "name": "schema_email",
+            "type": "email",
+            "instructions": "REQUIRED.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_59e65f1cdd8af",
+            "label": "faxNumber",
+            "name": "schema_faxnumber",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_59e65f4bdd8b0",
+            "label": "telephone",
+            "name": "schema_telephone",
+            "type": "text",
+            "instructions": "REQUIRED.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_59e65f64dd8b1",
+            "label": "description",
+            "name": "schema_description",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_59e65f77dd8b2",
+            "label": "logo",
+            "name": "schema_logo",
+            "type": "image",
+            "instructions": "REQUIRED.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_59e65f8edd8b3",
+            "label": "image",
+            "name": "schema_image",
+            "type": "image",
+            "instructions": "REQUIRED. Can be an image of the business of just the logo again.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_59e66034dd8b4",
+            "label": "priceRange",
+            "name": "schema_pricerange",
+            "type": "text",
+            "instructions": "REQUIRED. The price range can be represented by dollar signs: $\r\nIf the price of your service is $99, use $$.\r\nIf the price is $999, use $$$.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_591640b900136",
+            "label": "Shortcodes",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_59c54308faab5",
+            "label": "Primary Address Shortcode",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "You can use one of this shortcode to display the primary address (in schema format) within the wordpress content.\r\n\r\n<div class=\"shortcode-well\">[rsm_primary_address]<\/div>\r\n\r\n<small><em>*DEVELOPERS NOTE: This shortcode function depends on the various field names to populate the data. Don't change them!<\/em><\/small>",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        }
+    ]
+}

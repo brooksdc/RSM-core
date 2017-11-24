@@ -1,0 +1,373 @@
+{
+    "key": "group_59c0acf602d38",
+    "title": "OPTIONS: HEADER",
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-theme-settings"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "OPTIONS Panel: Theme Settings",
+    "fields": [
+        {
+            "key": "field_59c6c7dc3d72e",
+            "label": "Options",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_59c0ad151c0a7",
+            "label": "Logo Image - Standard",
+            "name": "rsm_logo_image_standard",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_59c5471955cb7",
+                        "operator": "!=",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_59c0ad9b1c0a9",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "full",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_59c0ad601c0a8",
+            "label": "Logo image - Retina Display",
+            "name": "rsm_logo_image_retina",
+            "type": "image",
+            "instructions": "NOTE: This image will be automatically reduced to 50% of it's size to achieve retina display. Also, if this is set, it will automatically override the use of the standard logo.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_59c5471955cb7",
+                        "operator": "!=",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_59c0ad9b1c0a9",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "full",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_59c5471955cb7",
+            "label": "Use SVG Logo?",
+            "name": "rsm_use_svg_logo",
+            "type": "true_false",
+            "instructions": "SVG files may need to be uploaded directly to your uploads folder for security reasons. **Checking this box will override any use of the Logo Images or Text above.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_59c0ad9b1c0a9",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_59f90359f4677",
+            "label": "SVG Code",
+            "name": "rsm_logo_svg_code",
+            "type": "textarea",
+            "instructions": "Copy and paste your &lt;svg&gt; code here",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_59c5471955cb7",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_59c5497bb7ce8",
+            "label": "Logo Max Width",
+            "name": "rsm_logo_max_width",
+            "type": "text",
+            "instructions": "To avoid any distortion with a RASTERIZED image (not SVG), it should match the true width of the STANDARD (non-retina) logo image. Any number is fine for SVG.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_59c0ad9b1c0a9",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "px",
+            "maxlength": ""
+        },
+        {
+            "key": "field_59c0ad9b1c0a9",
+            "label": "Use text only (no logo)",
+            "name": "rsm_use_text_only",
+            "type": "true_false",
+            "instructions": "If checked, the <a href=\"\/options-general.php\">site title<\/a> will be used instead of the logo image.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_59c5613950881",
+            "label": "Logo SEO settings for Homepage",
+            "name": "rsm_logo_seo_settings",
+            "type": "radio",
+            "instructions": "Determine if the Homepage logo or tagline should be wrapped as an H1",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "none": "None",
+                "logo": "Logo\/Site Name as H1"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "logo",
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "field_59df0143c5783",
+            "label": "Header Container Setting",
+            "name": "rsm_header_container_setting",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "default": "Default width (match page container)",
+                "fluid": "Fluid width (expand to browser width)"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "",
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "field_59fe0875f11cc",
+            "label": "LAYOUT",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_59fe089bf11cd",
+            "label": "Choose Header Layout",
+            "name": "rsm_header_layout_select",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "header-layout-1": "Header Layout 1 (logo left, nav right, top bar)",
+                "header-layout-2": "Header Layout 2 (logo left, nav centre, widget right)",
+                "header-layout-3": "Header Layout 3 (logo left, nav right)"
+            },
+            "default_value": [
+                "header-layout-1"
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        },
+        {
+            "key": "field_59fe0dcbfd5b9",
+            "label": "Layout Reference",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "<span class=\"rsm-layout-ref\">Layout 1:<span class=\"header-layout-1-thumb\"><\/span><\/span>\r\n<span class=\"rsm-layout-ref\">Layout 2:<span class=\"header-layout-2-thumb\"><\/span><\/span>",
+            "new_lines": "",
+            "esc_html": 0
+        },
+        {
+            "key": "field_59fe0cb58f377",
+            "label": "Drop-in widgets",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Each header layout has different number of \"drop-in\" areas available for customization. (Appearance > Widgets)\r\n\r\n<i>Quick Reference:<\/i><br>\r\n<b>Header Layout 1:<\/b> Header Drop-in Area 1<br>\r\n<b>Header Layout 2:<\/b> Header Drop-in Area 1, 2<br>",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_59c6c7fa3d72f",
+            "label": "USAGE",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_59c6c81a3d730",
+            "label": "Header Logo Shortcode",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Add the logo to your theme template using this shortcode:\r\n\r\n<div class=\"shortcode-well\">[rsm_header_logo]<\/div>\r\n\r\n<small><em>*DEVELOPERS NOTE: This shortcode function depends on the various field names set in the Options tab. Don't change them unless you know what you're doing!<\/em><br><br>If You want to override the markup of this template, you can copy the file from \/plugins\/_rsm_core\/templates\/rsm-header-logo.php, create a new folder named <b>rsm-templates<\/b> in <b>your theme<\/b>, and paste the file in there (using the same filename).<\/small>",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        }
+    ],
+    "modified": 1511445161
+}

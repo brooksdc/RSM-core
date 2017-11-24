@@ -1,0 +1,62 @@
+{
+    "key": "group_59c5453783024",
+    "title": "OPTIONS: TRACKING CODES",
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-social-networks-and-tracking-codes"
+            }
+        ]
+    ],
+    "menu_order": 1,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "Options Panel: Social Networks & Tracking",
+    "modified": 1511445164,
+    "fields": [
+        {
+            "key": "field_59c5453788617",
+            "label": "Google Tag Manager ID",
+            "name": "gtm_id",
+            "type": "text",
+            "instructions": "Enter the Google Tag Manager tracking code.\r\n\r\n** IMPORTANT. Add the analytics tracking code via the Tag Manager.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "GTM-XXXXXX",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_59c5453788669",
+            "label": "Facebook Pixel ID",
+            "name": "fb_pixel_id",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "prepend": "",
+            "append": ""
+        }
+    ]
+}

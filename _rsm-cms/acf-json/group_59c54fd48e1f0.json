@@ -1,0 +1,185 @@
+{
+    "key": "group_59c54fd48e1f0",
+    "title": "OPTIONS: ACCEPTED PAYMENT TYPES",
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-business-info"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "Options page: Business Info",
+    "modified": 1511445161,
+    "fields": [
+        {
+            "key": "field_59c55839b9e65",
+            "label": "Options",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_59c54fdb07140",
+            "label": "Display Payment Types",
+            "name": "rsm_payment_types",
+            "type": "checkbox",
+            "instructions": "Check off any payment types your business accepts.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "visa": "Visa",
+                "mc": "Mastercard",
+                "amex": "American Express",
+                "bank": "Bank Transfer",
+                "cash": "Cash"
+            },
+            "allow_custom": 0,
+            "save_custom": 0,
+            "default_value": [
+
+            ],
+            "layout": "vertical",
+            "toggle": 1,
+            "return_format": "value"
+        },
+        {
+            "key": "field_59c554481a067",
+            "label": "Add Custom",
+            "name": "rsm_payment_types_custom",
+            "type": "repeater",
+            "instructions": "You can add in some other options here if needed. These will be displaying icons to represent each, so you should either upload an icon here or use HTML to load a Font Awesome icon.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "",
+            "sub_fields": [
+                {
+                    "key": "field_59c5549d1a068",
+                    "label": "Label",
+                    "name": "label",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_59c554a61a069",
+                    "label": "HTML",
+                    "name": "html",
+                    "type": "textarea",
+                    "instructions": "OPTION A...",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": "",
+                    "new_lines": ""
+                },
+                {
+                    "key": "field_59c554e41a06a",
+                    "label": "Icon Upload",
+                    "name": "icon_upload",
+                    "type": "image",
+                    "instructions": "OPTION B...",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "thumbnail",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                }
+            ]
+        },
+        {
+            "key": "field_59c5584ab9e66",
+            "label": "Shortcodes",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_59c55880b9e67",
+            "label": "Payment Types Shortcode",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "You can use this shortcode to display the payment types within the wordpress content.\r\n\r\n<div class=\"shortcode-well\">[rsm_payment_types]<\/div>\r\n\r\n<small><em>*DEVELOPERS NOTE: This shortcode function depends on the \"rsm_payment_types_custom\" field name. Don't change that!<\/em><\/small>",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        }
+    ]
+}

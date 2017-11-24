@@ -1,0 +1,148 @@
+{
+    "key": "group_59c551462ce27",
+    "title": "OPTIONS: INSTAGRAM FEED",
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-global-template-parts"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "Options Page: Global Template Parts",
+    "modified": 1511445162,
+    "fields": [
+        {
+            "key": "field_59c55ff02477d",
+            "label": "Options",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_59c551c6d6111",
+            "label": "ACCESS REQUIRED",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "We will need your Instagram Username and Password to activate the feed for this website.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_59c55155d610f",
+            "label": "Instagram Handle \/ Name",
+            "name": "rsm_instagram_handle",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_59c55173d6110",
+            "label": "Number of images to show",
+            "name": "rsm_instagram_image_count",
+            "type": "range",
+            "instructions": "The images will be displayed in a single row",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 3,
+            "min": 3,
+            "max": 9,
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_59c5520fd6112",
+            "label": "Text",
+            "name": "rsm_instagram_text",
+            "type": "textarea",
+            "instructions": "Some callout text to ask people to follow you, or anything else you want to say.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 3,
+            "new_lines": ""
+        },
+        {
+            "key": "field_59c560002477e",
+            "label": "Shortcodes",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_59c560102477f",
+            "label": "Instagram Feed Shortcode",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "You can use this shortcode to display this content within wordpress.\r\n\r\n<div class=\"shortcode-well\">[rsm_instagram_feed]<\/div>\r\n\r\n<small><em>*DEVELOPERS NOTE: This shortcode function depends on the pre-defined field name(s). Don't change them!<\/em><\/small>",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        }
+    ]
+}

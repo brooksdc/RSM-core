@@ -1,0 +1,166 @@
+{
+    "key": "group_59c54c6966827",
+    "title": "OPTIONS: SERVICE AREAS",
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-business-info"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "Options page: Business Info",
+    "modified": 1511445162,
+    "fields": [
+        {
+            "key": "field_59c5605617329",
+            "label": "Options",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_59c54c86f3225",
+            "label": "Service Areas",
+            "name": "rsm_service_areas",
+            "type": "repeater",
+            "instructions": "Use this to define specific service areas. It will display a list and can include page links if you have localized service pages.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Add Service Area",
+            "sub_fields": [
+                {
+                    "key": "field_59c54ce4f3226",
+                    "label": "Area Name",
+                    "name": "area_name",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_59c54d00f3227",
+                    "label": "Link",
+                    "name": "link",
+                    "type": "link",
+                    "instructions": "OPTIONAL",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array"
+                }
+            ]
+        },
+        {
+            "key": "field_59eda15711c30",
+            "label": "Text Above Service Area List",
+            "name": "rsm_service_areas_text_above",
+            "type": "textarea",
+            "instructions": "This text will be displayed along with the service area list wherever this content is used throughout the site.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 2,
+            "new_lines": ""
+        },
+        {
+            "key": "field_59eda1b511c31",
+            "label": "Text Below Service Area List",
+            "name": "rsm_service_areas_text_below",
+            "type": "textarea",
+            "instructions": "This text will be displayed along with the service area list wherever this content is used throughout the site.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 2,
+            "new_lines": ""
+        },
+        {
+            "key": "field_59c560621732a",
+            "label": "Shortcodes",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_59c560731732b",
+            "label": "Service Area Shortcode",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "You can use this shortcode to display this content within wordpress.\r\n\r\n<div class=\"shortcode-well\">[rsm_service_areas]<\/div>\r\n\r\n<small><em>*DEVELOPERS NOTE: This shortcode function depends on the pre-defined field name(s). Don't change them!<\/em><\/small>",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        }
+    ]
+}
